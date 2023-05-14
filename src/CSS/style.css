@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+/* text style */
+h1 {
+  font-family: "itc-american-typewriter", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+
+h2 {
+  font-family: "itc-american-typewriter", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+  font-size: 30px;
+}
+
+p {
+  font-family: "itc-american-typewriter", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+  font-size: 14px;
+}
+/* */
+
+img {
+  border: solid white 5px;
+}
+
+.textbox {
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+/* scroll over hero effekt */
+main {
+  position: relative;
+  z-index: 2;
+}
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+/*  */

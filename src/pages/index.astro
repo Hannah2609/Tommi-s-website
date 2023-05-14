@@ -1,4 +1,8 @@
 ---
+import "../CSS/style.css";
+import "../CSS/animation.css";
+import Hero from "../components/hero.astro";
+
 ---
 
 <html lang="en">
@@ -7,9 +11,23 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css">
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<section class="hero-sticky">
+		<Hero class="hero"> Burger Joint</Hero></section>
+	<main>
+		<h1> hej </h1>
+
+	</main>
 	</body>
 </html>
+
+<style>
+	main {
+		height: 100vh;
+		background-color: black;
+	}
+
+</style>
