@@ -3,6 +3,11 @@ import "../CSS/style.css";
 ---
 
 <div class="hero">
+
+<video id="background-video" autoplay loop muted>
+<source src="/img/test2.mp4" type="video/mp4">
+</video>
+
   <h1><slot /></h1>
   <img
     class="fade-out-down"
@@ -26,8 +31,8 @@ import "../CSS/style.css";
   }
 
   .hero {
-    background-image: url("/img/landingbg.jpg");
-    background-size: cover;
+    /* background-image: url("/img/landingbg.jpg");
+    background-size: cover; */
   }
   .fade-out-down {
     animation: fade-out-down 2s ease infinite;
@@ -39,5 +44,16 @@ import "../CSS/style.css";
     position: absolute;
     left: 50%;
     bottom: 10%;
+  }
+  #background-video {
+   width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
   }
 </style>
