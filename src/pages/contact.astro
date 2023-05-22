@@ -1,0 +1,84 @@
+---
+import "../CSS/style.css"
+---
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css">
+		<title>Contact us</title>
+    </head>
+<body>
+    <main>
+        <h1 class="white">Is it me you're looking for?</h1>
+        <h2 class="white"> We dont have table reservations</h2>
+        <form action="kontakt">
+            <input type="text"  id="name" placeholder="Name">
+            <input type="text"  id="email" placeholder="Email" >
+            <input type="text"  id="subject" placeholder="Subject">
+           <textarea rows="20"  placeholder="What's on your mind.."></textarea>
+            <button>Send</button>
+        </form>
+    </main>
+</body>
+</html>
+
+<style>
+    @media (max-width:800px){
+    input, textarea {
+        background-color: var(--paper);
+        border: none;
+        height: 40px;
+        width: 300px;
+    }
+    }
+    @media (min-width:800px){
+    input, textarea {
+        background-color: var(--paper);
+        border: none;
+        height: 40px;
+        width: 500px;
+    
+    }
+    }
+   textarea {
+        height: 200px;
+        padding: 10px;
+    }
+    input {
+        padding-left: 10px;
+    }
+    input::placeholder {
+        font-size: 15px;
+        font-family: "American typewriter";
+    }
+    textarea::placeholder {
+        font-size: 15px;
+        font-family: "American typewriter";
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        margin: 2em;
+    } 
+    main {
+        text-align: center;
+    }
+    button {
+        border: none;
+        border-radius: 100px;
+        background-color: var(--red);
+        height: 40px;
+        width: 200px;
+        color: white;
+        font-family: "American typewriter";
+        font-size: 17px;
+        margin-top: 0.5em;
+    }
+
+</style>

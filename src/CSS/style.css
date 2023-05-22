@@ -18,16 +18,16 @@ body {
 
   /* fonte str */
   --h1-lille: 30px;
-  --h1-stor: 60px;
+  --h1-stor: 40px;
 
   --h2-lille: 20px;
-  --h2-stor: 35px;
+  --h2-stor: 25px;
 
   --h3-lille: 17px;
-  --h3-stor: 30px;
+  --h3-stor: 20px;
 
-  --p-lille: 15px;
-  --p-stor: 20px;
+  --p-lille: 14px;
+  --p-stor: 16px;
 
   --border-lille: solid white 3px;
   --border-stor: solid white 7px;
@@ -38,6 +38,7 @@ h1 {
   font-family: "itc-american-typewriter", serif;
   font-weight: 700;
   font-style: normal;
+  margin: 1em;
 }
 
 h2 {
