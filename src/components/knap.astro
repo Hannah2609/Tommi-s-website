@@ -1,0 +1,28 @@
+---
+import "../CSS/style.css"
+const { size, style } = Astro.props;
+---
+
+<a class="knap" data-size={size} data-style={style}><slot></slot></a>
+  
+  <style>
+@media (max-width: 900px) {
+      [data-size="lille"] {
+        padding-inline: 45px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 50px;
+        border: none;
+        background-color: red;
+      }
+    }
+
+@media(min-width:900px) {
+    [data-size="lille"] {
+        padding-inline: 40px;
+        padding: 15px;
+        border-radius: 50px;
+         background-color: red;
+    }
+}
+  </style>

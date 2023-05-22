@@ -25,9 +25,29 @@ import "../CSS/style.css";
   h1 {
     text-align: center;
     vertical-align: middle;
-    line-height: 80vh;
-    font-size: 50px;
+    line-height: 100vh;
     animation: fade-in-up 0.5s;
+    color: white;
+  }
+   @media(max-width:500px){
+    h1{
+      font-size: 50px;
+    }
+  }
+  @media(min-width:500px){
+    h1{
+      font-size: 70px;
+    }
+  }
+  @media(min-width:700px){
+    h1{
+      font-size: 100px;
+    }
+  }
+    @media(min-width:1000px){
+    h1{
+      font-size: 120px;
+    }
   }
 
   .hero {
