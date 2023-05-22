@@ -1,0 +1,47 @@
+---
+import "../CSS/style.css";
+---
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="/">Menu</a></li>
+      <li><a href="/about">Joints</a></li>
+      <li><a href="/services">Our story</a></li>
+      <li><a href="/contact">Order now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10%;
+    margin-left: 50%;
+    margin-top: 2%;
+  }
+
+  a {
+    font-family: "itc-american-typewriter", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .blue_link a {
+    color: var(--blue);
+  }
+  nav {
+    /* margin-inline: 5%; */
+  }
+
+  @media (max-width: 1000px) {
+    nav {
+      display: none;
+    }
+  }
+</style>

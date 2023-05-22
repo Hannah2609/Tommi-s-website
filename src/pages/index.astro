@@ -3,6 +3,9 @@ import "../CSS/style.css";
 import "../CSS/animation.css";
 import Hero from "../components/hero.astro";
 import Knap from "../components/knap.astro";
+import Header from "../components/header.astro"
+import Footer from "../components/footer.astro";
+
 ---
 
 <html lang="en">
@@ -14,7 +17,15 @@ import Knap from "../components/knap.astro";
 		<link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css">
 		<title>Astro</title>
 	</head>
+	<section class="Header">
+		<Header />
+	</section>
+
+	
+
 	<body>
+
+		
 		<section class="hero-sticky">
 		<Hero class="hero"> Burger Joint</Hero></section>
 	<main>
@@ -24,8 +35,9 @@ import Knap from "../components/knap.astro";
 		<h3 class="white">chicka</h3>
 		<p class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est dolor sit dicta possimus officiis ea enim, laborum ipsam blanditiis explicabo expedita dignissimos deserunt deleniti laudantium accusantium! Sed, quis rem.</p>
 		<Knap size="lille">Order now</Knap>
-	
+		<Footer />
 	</main>
+	
 	</body>
 </html>
 

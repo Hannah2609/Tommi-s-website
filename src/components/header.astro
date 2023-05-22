@@ -1,0 +1,51 @@
+---
+import "../CSS/style.css";
+// import Burgermenu from "./burgermenu.astro";
+import Nav from "./nav.astro";
+---
+
+<header>
+ 
+<section >
+<!-- <Burgermenu /> -->
+<Nav />    
+</section>    
+
+
+</header>
+
+<style>
+  
+    @media(max-width:600px){
+        h1 {
+            font-size: 20px;
+            margin: 2em;
+            margin-bottom: 1em;
+        }
+        #header {
+        border-bottom: 1px solid var(--line-grey);
+        padding-bottom: 10px;
+        margin-bottom: 2em;
+        height: 10vh;
+    }
+    }
+    @media(min-width:600px){
+        h1 {
+            font-size: 25px;
+            margin: 1.5em;
+            margin-bottom: 1em;
+        }
+        #header {
+        border-top: 1px solid var(--line-grey);
+        padding-bottom: 20px;
+    }
+    }
+    @media(min-width:1000px){
+       #header {
+        border-bottom: 1px solid var(--line-grey);
+        padding-bottom: 20px;
+        border-top: none;
+    }
+    }
+    
+    </style>
