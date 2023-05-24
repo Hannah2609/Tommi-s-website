@@ -1,3 +1,7 @@
+ .fade-out-down {
+    animation: fade-out-down 2s ease infinite;
+  }
+ 
  @keyframes fade-out-down {
     0% {
       opacity: 1;

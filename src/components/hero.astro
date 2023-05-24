@@ -1,25 +1,34 @@
 ---
 import "../CSS/style.css";
+import "../CSS/animation.css";
 ---
 
 <div class="hero">
   <video id="background-video" autoplay loop muted>
     <source src="/img/test2.mp4" type="video/mp4" />
   </video>
-
+<div class="text-overlay">
   <h1 class="white"><slot /></h1>
-  <img
+  <img 
     class="fade-out-down"
     src="../svg/arrow-down.svg"
     alt="Arrow scroll down"
   />
 </div>
+</div>
 
 <style>
-  h1 {
+  /* h1 {
     text-align: center;
     line-height: 90vh;
     animation: fade-in-up 0.5s;
+  } */
+  .text-overlay {
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   #background-video {
     width: 100vw;
@@ -30,7 +39,7 @@ import "../CSS/style.css";
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: -2;
   }
   @media (max-width: 500px) {
     h1 {
@@ -53,7 +62,4 @@ import "../CSS/style.css";
     }
   }
 
-  .fade-out-down {
-    animation: fade-out-down 2s ease infinite;
-  }
 </style>

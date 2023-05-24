@@ -24,31 +24,24 @@ import Footer from "../components/footer.astro";
 	
 
 	<body>
-
-		
-		<section class="hero-sticky">
-		<Hero class="hero"> Burger Joint</Hero></section>
+		<Hero> Burger Joint</Hero>
 	<main>
-
-		<h1 class="white"> hej </h1>
-		<h2 class="white">hola</h2>
-		<h3 class="white">chicka</h3>
-		<p class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum est dolor sit dicta possimus officiis ea enim, laborum ipsam blanditiis explicabo expedita dignissimos deserunt deleniti laudantium accusantium! Sed, quis rem.</p>
-		<Knap size="lille">Order now</Knap>
-		<Footer />
-	<a href="/contact/">kontakt side</a>
+		<Knap link="/contact/" size="lille">Contact us</Knap>	
 	</main>
+		<Footer />
+	
+
 	
 	</body>
 </html>
 
 <style>
 	main {
-		height: 100vh;
+		height: 200px;
+		width: 100%;
 		background-color: rgb(0, 0, 0);
 		background-image: url("/img/graineffect.png");
-		background-repeat: repeat;
-		
+		background-repeat: repeat;	
 	}
 	
 
