@@ -8,22 +8,58 @@ const { link, size, style } = Astro.props;
   <style>
 @media (max-width: 900px) {
       [data-size="lille"] {
-        padding-inline: 45px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border-radius: 50px;
-        border: none;
-        background-color: red;
+       border: none;
+        border-radius: 100px;
+        height: 40px;
+        width: 200px;
+        color: white;
+        font-family: "American typewriter";
+        font-size: 17px;
+        margin-top: 0.5em;
       }
     }
 
 @media(min-width:900px) {
     [data-size="lille"] {
-        padding-inline: 40px;
-        padding: 15px;
-        border-radius: 50px;
-         background-color: red;
+        border: none;
+        border-radius: 100px;
+        height: 40px;
+        width: 200px;
+        color: white;
+        font-family: "American typewriter";
+        font-size: 17px;
+        margin-top: 0.5em;
     }
+}
+ [data-size="max"] {
+        border: none;
+        border-radius: 100px;
+        height: 50px;
+        width: 90%;
+        color: white;
+        font-family: "American typewriter";
+        font-size: 17px;
+        margin-top: 1em;
+ }
+
+
+
+ [data-style="filled"] {
+   background-color: var(--blue);
+ }
+ [data-style="border"] {
+   border: solid 3px var(--red);
+   color: var(--red);
+   background-color: transparent;
+ }
+
+[data-style="filled"]:hover {
+  background-color: var(--red);
+}
+[data-style="border"]:hover {
+  background-color: var(--red);
+  color: white;
+  border: none;
 }
 
   </style>

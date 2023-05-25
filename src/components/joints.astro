@@ -1,37 +1,166 @@
 ---
 import "../CSS/style.css";
 import "../CSS/animation.css";
+import Knap from "../components/knap.astro";
 ---
+
 <card class="joint">
-        <img src="/img/kbjoint.png" alt="picture of Tommi's burger Joint in kødbyen">
-    <div class="text">
+  <img
+    src="/img/kbjoint.png"
+    alt="picture of Tommi's burger Joint in kødbyen"
+  />
+  <section class="text">
+    <div class="overskrift">
+      <div>
         <h1>Kødbyen</h1>
-        
+        <div class="open-closed">
+          <img src="/svg/grøn-dot.svg" alt="green dot for open" />
+          <h2>Open now</h2>
+        </div>
+      </div>
+      <div class="dropdown-arrow">
+        <img class="one" src="/svg/arrow-dropdown.svg" alt="click here to see more" />
+        <img class="two" src="/svg/arrow-up.svg" alt="arrow up for closing dropdown" />
+      </div>
     </div>
+    <div class="dropdown">
+        <div class="dropdown-text">
+      <div class="location">
+        <h3>Location</h3>
+        <p>Høkerboderne 21-23</p>
+        <p>1712 København V</p>
+      </div>
+      <div class="hours">
+        <h3>Opening hours</h3>
+        <p>Sun - Thu: 11 - 21</p>
+        <p>Fri - Sat: 11 - 22</p>
+      </div>
+    </div>
+      <div class="buttons">
+        <Knap size="max" style="border">Get directions</Knap>
+        <Knap size="max" style="filled">Order now</Knap>
+      </div>
+    </div>
+  </section>
 </card>
 
-
 <style>
+  @media (max-width: 900px) {
+    .joint {
+      background-color: var(--paper);
+      display: grid;
+      grid-template-rows: auto;
+      gap: 0px;
+      max-width: 300px;
+      margin: auto;
+    }
+    .overskrift {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 5px;
+    }
+    .dropdown-arrow img {
+      margin-right: 10px;
+      margin-top: 10px;
+      display: grid;
+    }
+    .dropdown-arrow .one {
+      grid-area: 1/1;
+    }
+    
+    .dropdown-arrow .two {
+      grid-area: 1/1;
+      display: none;
+    }
+    .open-closed {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-left: 10px;
+    }
+    .dropdown {
+      display: block;
+    }
+    .location {
+     margin-top: 2em;   
+     margin-left: 10px;
+    }
+    .hours {
+     margin-top: 2em;   
+     margin-left: 10px;
+    }
 
-@media (max-width:900px) {
+  }
+  @media (min-width: 900px) {
+    .joint {
+      background-color: var(--paper);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 900px;
+      margin: auto;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
 
-.joint {
-background-color: var(--paper);
-display: grid;
-grid-template-rows: 3fr 1fr;
-gap: 0px;
-width: 70vw;
- }
-}
-@media (min-width:900px) {
+    }
 
-.joint {
-background-color: var(--paper);
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
-width: 70vw;
- }    
-}
+    .overskrift {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 5px;
+    }
+    .dropdown-arrow img {
+      margin-right: 10px;
+      margin-top: 10px;
+      display: grid;
+    }
+    .dropdown-arrow .one {
+       display: none;
+    }
+    
+    .dropdown-arrow .two {
+      display: none;
+    }
+    .open-closed {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-left: 10px;
+    }
+    .dropdown-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .location {
+     margin-top: 2em;   
+     margin-left: 10px;
+    }
+    .hours {
+     margin-top: 2em;   
+     margin-left: 10px;
+    }
+    .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+       
+    }
+  }
 
+  h2, h3, p {
+    text-align: left;
+  }
+  h3 {
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+  p {
+    line-height: 20px;
+  }
 </style>
