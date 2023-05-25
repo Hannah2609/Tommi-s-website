@@ -6,7 +6,7 @@ const { link, size, style } = Astro.props;
 <a class="knap" href={link} target="_parent"><button data-size={size} data-style={style}><p><slot></slot></p></button></a>
 
   <style>
-@media (max-width: 900px) {
+@media (max-width: 700px) {
       [data-size="lille"] {
        border: none;
         border-radius: 100px;
@@ -19,11 +19,11 @@ const { link, size, style } = Astro.props;
       }
     }
 
-@media(min-width:900px) {
+@media(min-width:700px) {
     [data-size="lille"] {
         border: none;
         border-radius: 100px;
-        height: 40px;
+        height: 50px;
         width: 200px;
         color: white;
         font-family: "American typewriter";

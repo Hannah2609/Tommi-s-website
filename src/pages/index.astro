@@ -17,14 +17,14 @@ import Joints from "../components/joints.astro";
     <link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css" />
     <title>Astro</title>
   </head>
-  <section class="Header">
+  <!-- <section class="Header">
     <Header />
-  </section>
+  </section> -->
 
   <body>
     <Hero>Burger Joint</Hero>
     <main>
-    
+		<h1 class="white">Our Joint's</h1>
 	  <Joints/> 
 	   <Knap link="/contact/" size="lille">Contact us</Knap>
     </main>
@@ -33,11 +33,15 @@ import Joints from "../components/joints.astro";
 
   <style>
     main {
-      width: 100%;
       background-color: rgb(0, 0, 0);
       background-image: url("/img/graineffect.png");
       background-repeat: repeat;
+	  text-align: center;
     }
+	h1 {
+		margin: 2em;
+	}
+
   </style>
 
 
