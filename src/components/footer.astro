@@ -2,90 +2,139 @@
 import "../CSS/style.css";
 ---
 
-<footer class="Footer">
-   
-        <div class="footer-column">
-          <h4>Follow us</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/tommisburgerjointdk/"><img src="../svg/instagram.svg" alt="Instagram"></a></li>
-            <li><a href="https://www.facebook.com/pages/Tommis-Burger-Joint-K%C3%B8dbyen/104092424645147"><img src="../svg/facebook.svg" alt="Facebook"></a></li>
-          <h4>Contact us</h4>
-          <li><a href=""><img src="../svg/mail.svg" alt="Mail"></a></li>
-       
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Kødbyen</h4>
-         <!-- <p>Kødbyen
-
-            Hørkerboderne 21-23,
-            1712 København V
-            Denmark
-            
-            33 31 34 34
-            
-            Kontrolrapport</p> -->
-        </div>
-        <div class="footer-column">
-          <h4>Nørrebro</h4>
-     
-        </div>
-        <div class="footer-column">
-          <h4>Headquarters</h4>
-         
-        
-      </div>
-    </footer>
-
+<footer>
+  <section class="Footer">
   
-  <style>
-     
+    <div class="footer-column">
+      <h4>Follow us</h4>
+      <ul class="socials">
+        <li>
+          <a href="https://www.instagram.com/tommisburgerjointdk/"
+            ><img src="/svg/instagram.svg" alt="Instagram" /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/pages/Tommis-Burger-Joint-K%C3%B8dbyen/104092424645147"
+            ><img src="/svg/facebook.svg" alt="Facebook" /></a>
+        </li>
+      </ul>
+      <ul>
+        <h4>Contact us</h4>
+        <li><a href="/contact/"><img src="../svg/mail.svg" alt="Mail" /></a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Kødbyen</h4>
+      <p>
+        Hørkerboderne 21-23 <br />
+        1712 København V <br />
+        Denmark
+      </p>
+      <p>33 31 34 34</p>
+      <a href="">Kontrolrapport</a>
+    </div>
+    <div class="footer-column">
+      <h4>Nørrebro</h4>
+      <p>
+        Hørkerboderne 21-23 <br />
+        1712 København V <br />
+        Denmark
+      </p>
+      <p>33 31 34 34</p>
+      <a href="">Kontrolrapport</a>
+    </div>
+    <div class="footer-column">
+      <h4>Headquarters</h4>
+      <p>
+        Hørkerboderne 21-23 <br />
+        1712 København V <br />
+        Denmark
+      </p>
+      <p>33 31 34 34</p>
+      <a href="">Kontrolrapport</a>
+    </div>
+  </section>  
+</footer>
 
-  .footer-column {
-    display: flex;
-    flex-direction:column ;
-    justify-content: center;
-    align-items: center;
+<style>
+  @media (max-width: 450px) {
+    .Footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+      margin-left: 1em;
+    }
+    .footer-column {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+  }
+  @media (min-width: 450px) {
+    .Footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+       margin-left: 1em;
+    }
+    .footer-column {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .Footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .bg {
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  footer {
+    font-family: "itc-american-typewriter", serif;
+    color: white;
+    font-size: 120%;
+    background-color: black;
+    background-image: url("../public/img/pigtråde.png");
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    position: relative;
+    overflow: hidden;
+ 
+  }
+  .Footer {
+
+  }
+
+  a {
     font-family: "itc-american-typewriter", serif;
     font-style: normal;
     color: white;
-    font-size: 120%;
-  
-
   }
-    .Footer {
+
+  h4 {
+    margin-bottom: 1em;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .socials {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 5%;
-
-    /* position: relative; */
-    /* z-index: 4; */
-    background-color: black;
-    background-image: url("../public/img/pigtråde.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
-     
-     }
-
-     a {
-        font-family: "itc-american-typewriter", serif;
-        font-style: normal;
-        text-decoration: none;
-    
-     
-     }
-
-     ul{
-        list-style: none;
-       
-        
-     }
-
-    
-
-  
-
-  </style>
+    gap: 1em;
+    margin-bottom: 2em;
+  }
+  p {
+    margin-bottom: 0.5em;
+  }
+</style>
