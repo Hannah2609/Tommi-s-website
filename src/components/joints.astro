@@ -1,0 +1,37 @@
+---
+import "../CSS/style.css";
+import "../CSS/animation.css";
+---
+<card class="joint">
+        <img src="/img/kbjoint.png" alt="picture of Tommi's burger Joint in kødbyen">
+    <div class="text">
+        <h1>Kødbyen</h1>
+        
+    </div>
+</card>
+
+
+<style>
+
+@media (max-width:900px) {
+
+.joint {
+background-color: var(--paper);
+display: grid;
+grid-template-rows: 3fr 1fr;
+gap: 0px;
+width: 70vw;
+ }
+}
+@media (min-width:900px) {
+
+.joint {
+background-color: var(--paper);
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+width: 70vw;
+ }    
+}
+
+</style>

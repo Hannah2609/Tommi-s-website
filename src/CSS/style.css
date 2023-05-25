@@ -99,7 +99,9 @@ p {
 .border {
   border: solid white 5px;
 }
-
+img {
+  max-width: 100%;
+}
 .textbox {
   background-color: antiquewhite;
   padding: 10px;
