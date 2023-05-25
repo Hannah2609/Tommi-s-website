@@ -52,6 +52,11 @@ const { link, size, style } = Astro.props;
    color: var(--red);
    background-color: transparent;
  }
+  [data-style="borderwhite"] {
+   border: solid 3px white;
+   color: white;
+   background-color: transparent;
+ }
 
 [data-style="filled"]:hover {
   background-color: var(--red);

@@ -1,6 +1,7 @@
 ---
 import "../CSS/style.css";
 import "../CSS/animation.css";
+import Knap from "../components/knap.astro";
 ---
 
 <div class="hero">
@@ -9,6 +10,10 @@ import "../CSS/animation.css";
   </video>
 <div class="text-overlay">
   <h1 class="white"><slot /></h1>
+  <div class="knapper">
+  <Knap size="lille" style="filled">Order now</Knap>
+  <Knap size="lille" style="borderwhite">See menu</Knap>
+</div>
   <img 
     class="fade-out-down"
     src="../svg/arrow-down.svg"
@@ -18,18 +23,39 @@ import "../CSS/animation.css";
 </div>
 
 <style>
-  /* h1 {
-    text-align: center;
-    line-height: 90vh;
+  h1 {
     animation: fade-in-up 0.5s;
-  } */
+    margin-top: 30vh;
+  }
   .text-overlay {
     height: 86vh;
+    text-align: center;
+
+  }
+  img {
+   margin-top: 4em;
+  }
+  @media(max-width:800px) {
+h1 {
+  margin-top: 35vh;
+}
+  .knapper {
     display: flex;
     flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
     justify-content: center;
-    align-items: center;
   }
+ }
+  @media(min-width:800px) {
+
+  .knapper {
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+    justify-content: center;
+  }
+ }
   #background-video {
     width: 100vw;
     height: 100vh;

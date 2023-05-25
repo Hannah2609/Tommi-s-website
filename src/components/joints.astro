@@ -2,6 +2,8 @@
 import "../CSS/style.css";
 import "../CSS/animation.css";
 import Knap from "../components/knap.astro";
+
+
 ---
 
 <card class="joint">
@@ -18,12 +20,12 @@ import Knap from "../components/knap.astro";
           <h2>Open now</h2>
         </div>
       </div>
-      <div class="dropdown-arrow">
+      <button class="dropdown-arrow" id="toggleButton">
         <img class="one" src="/svg/arrow-dropdown.svg" alt="click here to see more" />
         <img class="two" src="/svg/arrow-up.svg" alt="arrow up for closing dropdown" />
-      </div>
+      </button>
     </div>
-    <div class="dropdown">
+    <div class="dropdown" id="dropdownDiv">
         <div class="dropdown-text">
       <div class="location">
         <h3>Location</h3>
@@ -44,6 +46,95 @@ import Knap from "../components/knap.astro";
   </section>
 </card>
 
+<card class="joint-2">
+     <img class="img-left"
+    src="/img/nørrejoint.png"
+    alt="picture of Tommi's burger Joint on Nørrebro"
+  />
+  <section class="text-left">
+    <div class="overskrift-left">
+      <div>
+        <h1>Kødbyen</h1>
+        <div class="open-closed">
+          <img src="/svg/grøn-dot.svg" alt="green dot for open" />
+          <h2>Open now</h2>
+        </div>
+      </div>
+      <button class="dropdown-arrow" id="toggle" >
+        <img class="one" src="/svg/arrow-dropdown.svg" alt="click here to see more" />
+        <img class="two" src="/svg/arrow-up.svg" alt="arrow up for closing dropdown" />
+      </button>
+    </div>
+    <div class="dropdown" id="dropdown">
+        <div class="dropdown-text">
+      <div class="location-left">
+        <h3>Location</h3>
+        <p>Høkerboderne 21-23</p>
+        <p>1712 København V</p>
+      </div>
+      <div class="hours-left">
+        <h3>Opening hours</h3>
+        <p>Sun - Thu: 11 - 21</p>
+        <p>Fri - Sat: 11 - 22</p>
+      </div>
+    </div>
+      <div class="buttons">
+        <Knap size="max" style="border">Get directions</Knap>
+        <Knap size="max" style="filled">Order now</Knap>
+      </div>
+    </div>
+  </section>
+</card>
+
+
+  <script>
+  var toggleButtonOne = document.getElementById("toggleButton");
+var dropdownDivOne = document.getElementById("dropdownDiv");
+ var toggleButtonTwo = document.getElementById("toggle");
+var dropdownDivTwo = document.getElementById("dropdown");
+
+toggleButtonOne.addEventListener("click", function() {
+  if (dropdownDivOne.style.display === "none") {
+    dropdownDivOne.style.display = "block";  
+    dropdownDivOne.classList.add("active");
+  toggleButtonOne.classList.toggle("active");
+  } else {
+    dropdownDivOne.style.display = "none";
+     toggleButtonOne.classList.remove("active");
+  }
+
+});
+
+toggleButtonTwo.addEventListener("click", function() {
+  if (dropdownDivTwo.style.display === "none") {
+    dropdownDivTwo.style.display = "block";
+    dropdownDivTwo.classList.add("active"); 
+    toggleButtonTwo.classList.toggle("active");
+  } else {
+    dropdownDivTwo.style.display = "none";
+    toggleButtonTwo.classList.remove("active");
+  }
+    
+   
+});
+
+window.addEventListener("resize", function() {
+  if (window.innerWidth > 900) {
+    dropdownDivOne.style.display = "block";
+     dropdownDivTwo.style.display = "block";
+    dropdownDivOne.classList.remove("active")
+    dropdownDivTwo.classList.remove("active")
+  }
+});
+window.addEventListener("resize", function() {
+  if (window.innerWidth <= 900) {
+    dropdownDivOne.style.display = "none";
+    dropdownDivTwo.style.display = "none";
+  }
+});
+
+  </script>
+
 <style>
   @media (max-width: 900px) {
     .joint {
@@ -54,16 +145,38 @@ import Knap from "../components/knap.astro";
       max-width: 300px;
       margin: auto;
     }
+    .joint-2 {
+      background-color: var(--paper);
+      display: grid;
+      grid-template-rows: auto;
+      gap: 0px;
+      max-width: 300px;
+      margin: auto;
+      margin-top: 2em;
+    }
+    .img-left {
+        grid-row: 1;
+    }
     .overskrift {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-inline: 5px;
+      margin-inline: 10px;
+       margin-top: 10px;
+    }
+     .overskrift-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 10px;
+      margin-top: 10px;
+    }
+    .dropdown-arrow {
+        display: grid;
     }
     .dropdown-arrow img {
       margin-right: 10px;
       margin-top: 10px;
-      display: grid;
     }
     .dropdown-arrow .one {
       grid-area: 1/1;
@@ -71,26 +184,43 @@ import Knap from "../components/knap.astro";
     
     .dropdown-arrow .two {
       grid-area: 1/1;
-      display: none;
+        opacity: 0;
     }
     .open-closed {
       display: flex;
       align-items: baseline;
       gap: 10px;
       margin-left: 10px;
+      margin-bottom: 10px;
     }
     .dropdown {
-      display: block;
+      display: none;
     }
     .location {
      margin-top: 2em;   
-     margin-left: 10px;
+     margin-left: 20px;
     }
     .hours {
      margin-top: 2em;   
-     margin-left: 10px;
+     margin-left: 20px;
     }
-
+    .location-left {
+     margin-top: 2em;   
+     margin-left: 20px;
+    }
+    .hours-left {
+     margin-top: 2em;   
+     margin-left: 20px;
+    }
+    .buttons {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    button {
+        border: none;
+        background-color: transparent;
+    }
   }
   @media (min-width: 900px) {
     .joint {
@@ -101,12 +231,34 @@ import Knap from "../components/knap.astro";
       width: 900px;
       margin: auto;
     }
+    .joint-2 {
+      background-color: var(--paper);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 900px;
+      margin: auto;
+      margin-top: 2em;
+    }
+    .img-left {
+        grid-column: 2/3;
+    }
     .text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+      .text-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        grid-column: 1/2;
+        grid-row: 1;
+        text-align: right;
 
     }
 
@@ -116,10 +268,34 @@ import Knap from "../components/knap.astro";
       align-items: center;
       margin-inline: 5px;
     }
+    .overskrift-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 5px;
+      margin-left: 20px;
+    }
+    .dropdown {
+        display: block;
+    }
+    
     .dropdown-arrow img {
       margin-right: 10px;
       margin-top: 10px;
       display: grid;
+    }
+    .dropdown-arrow .one {
+       display: none;
+    }
+    
+    .dropdown-arrow .two {
+      display: none;
+    }
+    .dropdown-arrow img {
+      margin-right: 10px;
+      margin-top: 10px;
+      display: grid;
+    
     }
     .dropdown-arrow .one {
        display: none;
@@ -146,12 +322,32 @@ import Knap from "../components/knap.astro";
      margin-top: 2em;   
      margin-left: 10px;
     }
+    .location-left {
+     margin-top: 2em;   
+     margin-left: 20px;
+ 
+    }
+    .hours-left{
+     margin-top: 2em;   
+     margin-left: 20px;
+    }
     .buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-       
+    margin-top: 1em;  
+    text-align: center;
+    }
+    button {
+        display: none;
     }
   }
+  .dropdown-arrow.active img:nth-child(1){
+    opacity: 0;
+  }
+  .dropdown-arrow.active img:nth-child(2){
+    opacity: 100;
+  }
+ 
 
   h2, h3, p {
     text-align: left;

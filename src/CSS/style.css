@@ -122,3 +122,7 @@ main {
 
 
 /*  */
+
+button {
+  cursor: pointer;
+}
