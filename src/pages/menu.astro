@@ -19,8 +19,127 @@ import Burgercard from "../components/burgercard.astro"
 
     <body>
         <main>
-            <Burgercard/>
+            <h1>Menu</h1>
+                <p>All burgers are served with lettuce, onion,
+                    <br class="mobile"> ketchup and mustard</p>
+
+                    <p>Our burger patties are 150 grams and high quality
+                        <br class="mobile">beef and are cooked medium</p>
+                    
+                    <p>*May contain nuts, sesame, egg and rye</p>
+                    
+                    <h4>Offer of the century</h4>
+                        <section class="grid-container">    
+                            <Burgercard/>
+                            <Burgercard/>
+                            <Burgercard/>
+                            <Burgercard/>
+                            <Burgercard/>
+                            <Burgercard/>
+                            <Burgercard/>
+                            <Burgercard/>
+                        </section>
+
+            <h4 class="both">Add ons
+                <span class="desktop">Kids</span>
+            </h4>
+            
+            <h4 class="both">Drinks
+                <span class="desktop">Lunch offer</span>
+            </h4>
+
+            <h4 class="hungry">Hungry yet?</h4>
         </main>
         <Footer/>
     </body>
 </html>
+
+<style>
+
+/* Mobile view */
+@media (max-width:800px) {
+    h1{
+        color: var(--text-white);
+        text-align: center;
+
+        margin-bottom: 10px;
+    }
+    h4{
+        color: var(--text-white);
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 40px;
+
+        font-size: 22px;
+        font-family: "itc-american-typewriter", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    p{
+        font-size: 10px;
+        line-height: normal;
+        color: var(--text-white);
+        text-align: center;
+
+        margin-bottom: 7px;
+    }
+    .mobile{
+        display: initial;
+    }
+
+    .desktop{
+        display: none;
+    }
+}
+
+/* Desktop view */
+@media (min-width:800px) {
+    h1{
+        color: var( --text-white);
+        text-align: center;
+
+        margin-bottom: 10px;
+    }
+    h4{
+        color: var(--text-white);
+        margin-left: 35px;
+        margin-top: 60px;
+        
+
+        font-size: 43px;
+        font-family: "itc-american-typewriter", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    p{
+        color: var(--text-white);
+        text-align: center;
+        font-family: "itc-american-typewriter", serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 13px;
+        line-height: 23px;
+
+        margin-bottom: 7px;
+    }
+    .mobile{
+        display: none;
+    }
+  
+    .both{
+        display: flex;
+        justify-content: space-between;
+    }
+    .desktop{
+        text-align: right;
+        margin-right: 300px;
+    }
+    .hungry{
+        margin-left: 350px;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+}
+</style>
