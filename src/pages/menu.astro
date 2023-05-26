@@ -3,6 +3,8 @@ import "../CSS/style.css";
 import Header from "../components/header.astro"
 import Footer from "../components/footer.astro"
 import Burgercard from "../components/burgercard.astro"
+import Friescard from "../components/friescard.astro"
+import Drinkscard from "../components/drinkscard.astro"
 ---
 
 <html lang="en">
@@ -31,24 +33,24 @@ import Burgercard from "../components/burgercard.astro"
                     <h4>Offer of the century</h4>
                         <section class="grid-container">    
                             <Burgercard/>
-                            <Burgercard/>
-                            <Burgercard/>
-                            <Burgercard/>
-                            <Burgercard/>
-                            <Burgercard/>
-                            <Burgercard/>
-                            <Burgercard/>
+                            
                         </section>
 
             <h4 class="both">Add ons
                 <span class="desktop">Kids</span>
             </h4>
+                <Friescard/>
             
             <h4 class="both">Drinks
                 <span class="desktop">Lunch offer</span>
             </h4>
+                <Drinkscard/>
 
-            <h4 class="hungry">Hungry yet?</h4>
+                <div class="hungry-bottom">
+                    <h4 class="hungry">Hungry yet?</h4>
+
+                    <img src="../public/svg/lunchpil.svg" alt="pil">
+                </div>
         </main>
         <Footer/>
     </body>
@@ -76,7 +78,7 @@ import Burgercard from "../components/burgercard.astro"
         font-style: normal;
     }
     p{
-        font-size: 10px;
+        font-size: 9px;
         line-height: normal;
         color: var(--text-white);
         text-align: center;
@@ -90,6 +92,13 @@ import Burgercard from "../components/burgercard.astro"
     .desktop{
         display: none;
     }
+    .hungry-bottom{
+        position: relative;
+    }
+    img{
+        position: absolute;
+    }
+
 }
 
 /* Desktop view */
@@ -126,10 +135,10 @@ import Burgercard from "../components/burgercard.astro"
         display: none;
     }
   
-    .both{
+    /* .both{
         display: flex;
         justify-content: space-between;
-    }
+    } */
     .desktop{
         text-align: right;
         margin-right: 300px;
@@ -137,9 +146,11 @@ import Burgercard from "../components/burgercard.astro"
     .hungry{
         margin-left: 350px;
     }
-    .grid-container{
+    /* .grid-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0px;
+    } */
+        
 }
 </style>
