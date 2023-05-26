@@ -1,0 +1,200 @@
+---
+import "../CSS/style.css";
+import "../CSS/animation.css";
+import Footer from "../components/footer.astro";
+import Instagram from "../components/instagram.astro";
+import Header from "../components/header.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css" />
+    <title>Astro</title>
+  </head>
+  <body>
+    <section class="hero">
+      <Header />
+    </section>
+    <main>
+      <section class="container">
+        <img
+          class="img1"
+          src="/img/island1.webp"
+          alt="photo of tommis iceland"
+        />
+        <img class="img2" src="/img/tommi.webp" alt="photo of tommi" />
+        <img class="burger" src="/svg/burger.svg" alt="Burger sticker" />
+        <div class="tekstboks1">
+          <h1>From Iceland to Copenhagen</h1>
+          <p>
+            Tommi's Burger Joint, was established in the early months of 2004
+            and opened the 10th of April that year by Tómas Tómasson aka Tommi,
+            his sons Ingvi Týr Tómasson and Tómas Junior along with
+            ÖrnHreinsson, aka Öddi.
+          </p>
+          <br />
+          <p>
+            The first Burger Joint location was by the harbor in downtown
+            Reykjavik and became very popular. Due to that popularity, a few
+            more Burger Joints were opened in different parts of the greater
+            Reykjavík area.
+          </p>
+          <br />
+          <p>
+            Today there are a total of seven Burger Joints in Iceland and the
+            Tommi's Burger Joint Family spread even further - London, Berlin,
+            Rome and <b>Copenhagen.</b>
+          </p>
+        </div>
+      </section>
+
+      <section class="container2">
+        <img
+          class="img1"
+          src="/img/thevibepin.webp"
+          alt="photo of people outside of Tommi's"
+        />
+        <div class="tekstboks2">
+          <h1>The vibe</h1>
+          <p>
+            There's no need to dress up, but it's totally fine if you do. We
+            don't discriminate and we'll always welcome you with a smile. <br><br> We're
+            proudly rough around the edges and strongly believe that good music
+            and relaxed atmophere makes a great burger taste even better.
+          </p>
+        </div>
+      </section>
+
+      <section class="container3">
+        <img
+          class="img1"
+          src="/img/theburger.webp"
+          alt="photo of tommis burger"
+        />
+        <div class="tekstboks3">
+          <h1>The burger</h1>
+          <p>
+            Each part of the burger coming together is what makes it such a
+            slam-dunk. Perfectly grilled meat. The soft warm bun. The fresh
+            veggies. <br><br> The sauce and the simply glorious combination of great food
+            and fast service. We only use top-quality meat from grass-fed
+            cattle, bake our buns daily, and put those good greens in from fresh
+            supply. The result is a simple, yet gloriously satisfying, classic
+            burger.
+          </p>
+        </div>
+      </section>
+      <Instagram />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    text-align: center;
+  }
+  .hero {
+    width: 100vw;
+    height: 100vh;
+  }
+  .tekstboks1,
+  .tekstboks2,
+  .tekstboks3 {
+    background-color: var(--paper);
+    padding: 20px;
+    text-align: left;
+  }
+  h1 {
+    margin-bottom: 0.5em;
+  }
+  .knap {
+    text-align: center;
+    margin-top: 0.5em;
+  }
+
+  @media (max-width: 800px) {
+    .tekstboks1,
+    .tekstboks3 {
+      max-width: 300px;
+      margin: auto;
+      margin-top: -10px;
+    }
+    .tekstboks2 {
+      padding-top: 50px;
+      max-width: 300px;
+      margin: auto;
+      margin-top: -50px;
+    }
+    .img1 {
+      max-width: 300px;
+    }
+    .img2 {
+      display: none;
+    }
+    .burger {
+      display: none;
+    }
+    .container {
+      margin-bottom: 5em;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .container {
+      height: 1000px;
+      width: 800px;
+      position: relative;
+      margin: auto;
+      margin-top: 5em;
+      margin-bottom: 4em;
+    }
+     .container2 {
+      height: 600px;
+      width: 800px;
+      position: relative;
+      margin: auto;
+      margin-top: 5em;
+      margin-bottom: 4em;
+    }
+     .container3 {
+      height: 600px;
+      width: 800px;
+      position: relative;
+      margin: auto;
+      margin-top: 5em;
+      margin-bottom: 4em;
+    }
+    .tekstboks1 {
+      max-width: 400px;
+      padding: 30px;
+      position: absolute;
+      right: 0;
+      top: 200px;
+    }
+    .img1 {
+      max-width: 400px;
+      position: absolute;
+      top: 0;
+      right: 30%;
+    }
+    .img2 {
+      max-width: 300px;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      z-index: 100;
+    }
+    .burger {
+      max-width: 150px;
+      position: absolute;
+      top: 15%;
+      left: 10%;
+      z-index: 100;
+    }
+  }
+</style>
