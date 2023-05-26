@@ -6,7 +6,7 @@ import Knap from "../components/knap.astro";
 <section class="container">
 <img class="img2" src="/img/bla_burgerpin.webp" alt="">
 <img class="img1" src="/img/burgerpin.webp" alt="pin" />
-
+<img class="burger" src="/svg/burger.svg" alt="Burger sticker">
 <div class="tekstboks">
   <h1>Tommi's Burger</h1>
   <p>
@@ -40,12 +40,16 @@ import Knap from "../components/knap.astro";
      .tekstboks {
         max-width: 300px;
         margin: auto;
+        margin-top: -10px;
      }
      .img1 {
         max-width: 300px;
      }
      .img2 {
         display: none;
+     }
+       .burger {
+       display: none;
      }
   }
 
@@ -77,6 +81,13 @@ import Knap from "../components/knap.astro";
        position: absolute;
        top: 40%;
        left: 0;
+       z-index: 100;
+     }
+       .burger {
+       max-width: 150px;
+       position: absolute;
+       top: 15%;
+       left: 10%;
        z-index: 100;
      }
   }
