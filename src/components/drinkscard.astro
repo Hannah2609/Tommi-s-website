@@ -1,0 +1,268 @@
+---
+import "../CSS/style.css"
+---
+
+<card>
+<section class="drinks-grid">
+    <section class="sweet-column">
+        <div>
+            <h3>Milkshakes 60,-</h3>
+                <p>Vanilla</p>
+                <p>Strawberry </p>
+                <p>Chocolate</p>
+                <p>Caramel</p>
+        </div>
+        <div>
+            <br>
+            <h3>Dessert 50,-</h3>
+            <p>Tommi's Ice Sandwich</p>
+        </div>
+    </section>
+
+    <section class="cold-column">
+        <div>
+            <h3>Cold Drinks & Beers</h3>
+            
+                <h4>Cold drinks 25,-</h4>
+                    <p>Coca Cola, Cola Zero, Egis Appelsin,
+                        <br>
+                        Carlsberg Sport, Ginger Ale, Orange Juice, Apple Juice,
+                        <br> 
+                        Still Water, Sparkling Water
+                    </p>
+                    <br>
+                
+                <h4>Beers</h4>
+
+                <p><strong>Schnitzlbaumer Lagerbier Hell 50,-</strong></p>
+                    <p class="procent">4,9% 0,5 L</p>
+               
+
+                <p><strong>Bryghus - Ùlfur Ùlfur 65,-</strong><p/>
+                    <p class="procent">9% 0,33 L</p>
+        </div>
+    </section>
+
+    <section class="lunch-column">
+        <div>
+            <h3>Hungry for Lunch?</h3>
+            <p class="menu">Cheese Burger + Fries + Soda</p>
+            <p class="offer">Don’t miss out on our lunch offer on Weekdays from
+                <br>11:00-17:00 for only 89,-</p>
+            
+                <p class="only">Only at Nørrebro</p>
+        </div>
+    </section>
+</section>
+</card>
+
+<style>
+
+/* Mobile view */
+    @media (max-width:800px){
+
+/* Sweet drinks */
+        .sweet-column{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        padding-bottom: 10px;
+        max-width: 300px;
+    }
+    .sweet-column br{
+        display: none;
+    }
+    h3{
+        margin-top: 13px;
+        margin-left: 13px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    p{
+        margin-left: 13px;
+        font-size: 11px;
+        line-height: 2;
+    }
+
+/* Cold drinks */
+    .cold-column{
+        display: flex;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        padding-bottom: 10px;
+        max-width: 300px;
+    }
+
+    .cold-column h3{
+        margin-bottom: 12px;
+    }
+    h4{
+        text-align: left;
+        margin-left: 13px;
+        font-size: 11px;
+        font-family: "itc-american-typewriter", serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    p{
+        margin-left: 13px;
+        margin-right: 4px;
+        font-size: 9px;
+        line-height: 2;
+    }
+
+/* Lunch offer */
+
+    .lunch-column{
+        display: flex;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --red);
+        border-radius: 2px;
+        max-width: 300px;
+    }
+    .lunch-column h3{
+        color: var(--text-white);
+        margin-top: 10px;
+    }
+    .menu{
+        color: var(--text-white);
+        margin-top: -2px;
+        margin-left: 20px;
+        font-size: 8px;
+        font-weight: 400;
+    }
+    
+    .menu::before {
+        content: "·";
+        margin-right: 5px;
+    }
+
+    .offer{
+        color: var(--text-white);
+        margin-left: 13px;
+        margin-top: 10px;
+        font-size: 8px;
+        font-weight: 600;
+    }
+    .only{
+        margin-top: 10px;
+        margin-right: 18px;
+        margin-bottom: 10px;
+    }
+
+
+    
+}
+
+
+/* Desktop view */
+    @media (min-width:800px){
+
+    .drinks-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0px;
+    }
+/* Sweet-column */
+    .sweet-column{
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        width: 300px;
+        padding-bottom: 20px;
+     }
+     h3{
+        font-weight: 600;
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+        font-size: 22px;
+    }
+    p{
+        margin-top: 12px;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+/* Cold column */
+    .cold-column{
+        display: flex;
+        margin-left: 5px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        width: 450px;
+        padding-bottom: 20px;
+    }
+    h4{
+        margin-left: 25px;
+        margin-top: 10px;
+        font-size: 15px;
+        font-family: "itc-american-typewriter", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+/* Lunch column */
+    .lunch-column{
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --red);
+        border-radius: 2px;
+        width: 400px;
+        padding-bottom: 20px;
+    }
+    .lunch-column h3{
+        color: var(--text-white);
+    }
+    .lunch-column .menu{
+        color: var(--text-white);
+    }
+    .offer{
+        color: var(--text-white);
+        margin-left: 25px;
+        margin-top: 40px;
+        font-weight: 600;
+    }
+    .menu::before {
+        content: "·";
+        margin-right: 5px;
+    }
+    .lunch-column br{
+        display: none;
+    }
+    .only{
+        margin-top: 60px;
+        margin-right: 18px;
+        margin-bottom: 10px;
+        font-size: 17px;
+    }
+    .procent{
+        font-size: 13px;
+    }
+    .procent::before{
+        content: "·";
+        margin-right: 5px;
+    }
+    
+    
+}
+
+</style>

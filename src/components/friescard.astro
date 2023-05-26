@@ -1,0 +1,322 @@
+---
+import "../CSS/style.css"
+---
+
+<card>
+    
+<section class="add-grid"> 
+    <section class="addons"> 
+    <h1 class="white">Add ons</h1>
+    <div class="flexadd">
+        <section class="fries-column">
+            <div>
+                <h3>Fries
+                    <span class="size">Small/Large</span>
+                </h3>
+                
+                    <p>Classic Fries  35/55,-
+                        <br>Sweet Patato 50/70,-</p>
+                    <p id="red">Sweet Fries Upgrade 15,-</p>
+            </div>
+        </section>
+
+        <section class="dips-column">
+            <div>
+                <h3>Dips 15,-</h3>
+                    <p>Tommi's Cocktail
+                        <span class="right-1">
+                            <br class="skift">Bearnaise</span>
+                            <br>Mayo/Vegan Mayo
+
+                        <span class="right-2">
+                            <br class="skift">Spicy BBQ</span>
+                            <br>
+                            <span class="last">Chili Mayo</span>
+                        </p>
+            </div>
+        </section>
+
+        <section class="addons-column">
+            <div>
+                <h3>Add-ons</h3>
+                    <p>Cheese 10,-
+
+                        <span class="right-3">
+                            <br class="skift">Spicy BBQ Sauce 15,-</span>
+                            <br>Bacon 15,-
+                            
+                        <span class="right-4">
+                            <br class="skift">Coleslaw 10,-</span>
+                            <br>
+                            <span class="last">Extra patty 40,-</span>
+                        </p>
+                </div>
+            </section></div>
+</section> 
+    
+        <section class="kidssection"> 
+      <div class="kids">
+        <h1 class="white">Kids</h1>
+            <section class="kids-column">
+                
+                <div>
+                    <h3>Kids offer 100,-</h3>
+                    <p class="tilbehor">+ Fries & Soda</p>
+                    <p>Cheese, lettuce, tomato, onion,<br>
+                        mayo, ketchup and mustard</p>
+                    <p>Single burger 70,-</p>
+                </div>
+            </section>
+        </section>
+        </div>
+    
+</section>
+  
+
+</card>
+
+<style>
+
+/* Mobile view */
+@media (max-width:800px){
+
+/* Fries */
+    .fries-column{
+        display: flex;
+        align-items: center;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        max-width: 300px;
+    }
+
+    h3{
+        margin-top: 13px;
+        margin-left: 13px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    p{
+        margin-left: 13px;
+        font-size: 11px;
+        line-height: 2;
+    }
+    .size{
+        font-size: 11px;
+        font-weight: 300;
+        margin-left: 155px;
+    }
+   
+    #red{
+        color: var(--red);
+        font-weight: 400;
+        font-size: 9px;
+        margin-bottom: 10px;
+        margin-top: 5px
+    }
+
+/* Dips */
+    .dips-column{
+        display: flex;
+        align-items: center;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        padding-bottom: 10px;
+        max-width: 300px;
+    }
+    .right-1{
+        margin-left: 30px;
+    }
+    .right-2{
+        margin-left: 21.5px;
+    } 
+    .skift{
+        display: none;
+    }
+    .dips-column .last{
+        margin-bottom: 10px;
+    }
+   
+/* Add-ons */
+    .addons-column{
+        display: flex;
+        align-items: center;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        padding-bottom: 10px;
+        max-width: 300px;
+    }
+    .right-3{
+        margin-left: 60px;
+    }
+    .right-4{
+        margin-left: 64.5px;
+    }
+   
+/* Kids-offer */
+    .kids-column{
+        display: flex;
+        align-items: center;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-top: 20px;
+        background-color: var( --red);
+        border-radius: 2px;
+        max-width: 300px;
+    }
+    .kids-column h3{
+        color: var(--text-white);
+    }
+    .kids-column p{
+        color: var(--text-white);
+        line-height: 1.5;
+        margin-top: 5px;
+        font-weight: 400;
+    }
+    .tilbehor{
+        color: var(--text-white);
+        margin-top: -3px;
+        margin-left: 18px;
+        font-size: 8px;
+        font-weight: 200;
+    }
+    .kids-column p:last-child{
+        color: var(--bg-color);
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 9px;
+    }
+   
+}
+
+
+
+/* Desktop view */
+@media (min-width:800px){
+
+.add-grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+}
+/* Fries */
+    .fries-column{
+        align-items: center;
+        margin-left: 35px;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        width: 300px;
+    }
+    h3{
+        font-weight: 600;
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+        font-size: 22px;
+    }
+    h1{
+        color: var(--text-white);
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+    }
+    .fries-column p{
+        margin-top: 20px;
+    }
+    p{
+        margin-top: 12px;
+        margin-left: 25px;
+        font-size: 15px;
+        line-height: 2;
+    }
+    .size{
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 60px;
+    }
+    #red{
+        color: var(--red);
+        font-weight: 400;
+        font-size: 13px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+/* Dips */
+    .dips-column{
+        display: flex;
+     
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        width: 300px;
+        padding-bottom: 10px;
+    }
+
+/* Add-ons */
+    .addons-column{
+        display: flex;
+        margin-top: 20px;
+        background-color: var( --paper);
+        border-radius: 2px;
+        width: 300px;
+        padding-bottom: 10px;
+    }
+    .flexadd {
+        display: flex;
+        gap: 2em;
+    }
+
+/* Kids-offer */
+    .kids-column{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        background-color: var( --red);
+        border-radius: 2px;
+        width: 350px;
+        padding-bottom: 10px;
+    }
+    .kids-column p:last-child{
+        color: var(--bg-color);
+    }
+    .tilbehor{
+        margin-top: 3px;
+        margin-left: 30px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .single{
+        margin-top: 45px;
+        margin-right: 18px;
+        text-align: right;
+    }
+    .kids-column h3{
+        color: var(--text-white);
+        font-weight: 600;
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+    }
+    .kids-column p{
+        color: var(--text-white);
+    }
+    #red{
+        color: var(--red);
+        font-weight: 400;
+        font-size: 13px;
+        margin-top: 55px;
+        margin-bottom: 20px;
+    }
+}
+</style>
