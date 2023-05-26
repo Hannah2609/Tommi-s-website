@@ -4,9 +4,10 @@ import "../CSS/style.css"
 
 <card>
     
-<section class="add-grid">   
-        <!-- <h3>Add ons</h3> -->
-    <section class="addons">
+<section class="add-grid"> 
+    <section class="addons"> 
+    <h1 class="white">Add ons</h1>
+    <div class="flexadd">
         <section class="fries-column">
             <div>
                 <h3>Fries
@@ -22,7 +23,7 @@ import "../CSS/style.css"
         <section class="dips-column">
             <div>
                 <h3>Dips 15,-</h3>
-                    <p>Tommi’s Cocktail
+                    <p>Tommi's Cocktail
                         <span class="right-1">
                             <br class="skift">Bearnaise</span>
                             <br>Mayo/Vegan Mayo
@@ -49,11 +50,13 @@ import "../CSS/style.css"
                             <br>
                             <span class="last">Extra patty 40,-</span>
                         </p>
-            </div>
-        </section>
+                </div>
+            </section></div>
+</section> 
     
-      
-        <!-- <h3>Kids</h3> -->
+        <section class="kidssection"> 
+      <div class="kids">
+        <h1 class="white">Kids</h1>
             <section class="kids-column">
                 
                 <div>
@@ -64,8 +67,9 @@ import "../CSS/style.css"
                     <p>Single burger 70,-</p>
                 </div>
             </section>
-        
-    </section>
+        </section>
+        </div>
+    
 </section>
   
 
@@ -85,6 +89,7 @@ import "../CSS/style.css"
         margin-top: 20px;
         background-color: var( --paper);
         border-radius: 2px;
+        max-width: 300px;
     }
 
     h3{
@@ -123,6 +128,7 @@ import "../CSS/style.css"
         background-color: var( --paper);
         border-radius: 2px;
         padding-bottom: 10px;
+        max-width: 300px;
     }
     .right-1{
         margin-left: 30px;
@@ -147,6 +153,7 @@ import "../CSS/style.css"
         background-color: var( --paper);
         border-radius: 2px;
         padding-bottom: 10px;
+        max-width: 300px;
     }
     .right-3{
         margin-left: 60px;
@@ -154,10 +161,7 @@ import "../CSS/style.css"
     .right-4{
         margin-left: 64.5px;
     }
-    .kids-column{
-        display: none;
-    }
-
+   
 /* Kids-offer */
     .kids-column{
         display: flex;
@@ -167,6 +171,7 @@ import "../CSS/style.css"
         margin-top: 20px;
         background-color: var( --red);
         border-radius: 2px;
+        max-width: 300px;
     }
     .kids-column h3{
         color: var(--text-white);
@@ -200,6 +205,7 @@ import "../CSS/style.css"
 
 .add-grid{
     display: grid;
+    grid-template-columns: 3fr 1fr;
     gap: 15px;
 }
 /* Fries */
@@ -249,7 +255,7 @@ import "../CSS/style.css"
 /* Dips */
     .dips-column{
         display: flex;
-        align-items: center;
+     
         margin-top: 20px;
         background-color: var( --paper);
         border-radius: 2px;
@@ -260,15 +266,15 @@ import "../CSS/style.css"
 /* Add-ons */
     .addons-column{
         display: flex;
-        align-items: center;
         margin-top: 20px;
         background-color: var( --paper);
         border-radius: 2px;
         width: 300px;
         padding-bottom: 10px;
     }
-    .addons {
+    .flexadd {
         display: flex;
+        gap: 2em;
     }
 
 /* Kids-offer */

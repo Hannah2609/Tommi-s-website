@@ -33,12 +33,13 @@ import Drinkscard from "../components/drinkscard.astro"
                     <h4>Offer of the century</h4>
                         <section class="grid-container">    
                             <Burgercard/>
+                            <Burgercard/>
                             
                         </section>
-
+<!-- 
             <h4 class="both">Add ons
                 <span class="desktop">Kids</span>
-            </h4>
+            </h4> -->
                 <Friescard/>
             
             <h4 class="both">Drinks
@@ -69,7 +70,7 @@ import Drinkscard from "../components/drinkscard.astro"
     h4{
         color: var(--text-white);
         text-align: left;
-        margin-left: 20px;
+        margin-left: 35px;
         margin-top: 40px;
 
         font-size: 22px;
@@ -89,9 +90,6 @@ import Drinkscard from "../components/drinkscard.astro"
         display: initial;
     }
 
-    .desktop{
-        display: none;
-    }
     .hungry-bottom{
         position: relative;
     }
@@ -146,11 +144,14 @@ import Drinkscard from "../components/drinkscard.astro"
     .hungry{
         margin-left: 350px;
     }
-    /* .grid-container{
+    
+        
+}
+@media (min-width:1200px) {
+.grid-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0px;
-    } */
-        
+    }
 }
 </style>
