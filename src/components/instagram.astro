@@ -1,0 +1,55 @@
+---
+import "../CSS/style.css";
+---
+
+<section class="Instagram">
+    <h1 class="white">#tommis</h1>
+    <h2 class="white">@tommisburgerjointdk</h2>
+<div class="billede_grid">
+<img src="../public/img/instagram1pin.webp" alt="Instagram 1">
+<img src="../public/img/instagram2pin.webp" alt="Instagram 2">
+<img src="../public/img/instagram3pin.webp" alt="Instagram 3">
+<img src="../public/img/instagram4pin.webp" alt="Instagram 4">
+<img src="../public/img/instagram5pin.webp" alt="Instagram 5">
+<img src="../public/img/instagram6pin.webp" alt="Instagram 6">
+</div>
+</section>
+<style>
+      @media(max-width:800px) {
+        .billede_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 15%;
+    gap: 1.5em;
+   }
+
+ }
+  @media(min-width:800px) {
+   .billede_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-inline: 10%;
+    gap: 2em;
+
+   }
+
+   img{
+    width: 300px;
+ 
+
+   }
+   .Instagram{
+align-items: center;
+   }
+
+}
+@media(min-width:1200px) {
+   .billede_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-inline: 20%;
+    gap: 2em;
+
+   }
+}
+</style>
