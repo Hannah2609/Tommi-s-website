@@ -2,8 +2,6 @@
 import "../CSS/style.css";
 import "../CSS/animation.css";
 import Knap from "../components/knap.astro";
-
-
 ---
 
 <card class="joint" id="2">
@@ -21,33 +19,56 @@ import Knap from "../components/knap.astro";
         </div>
       </div>
       <button class="dropdown-arrow" id="toggleButton">
-        <img class="one" src="/svg/arrow-dropdown.svg" alt="click here to see more" />
-        <img class="two" src="/svg/arrow-up.svg" alt="arrow up for closing dropdown" />
+        <img
+          class="one"
+          src="/svg/arrow-dropdown.svg"
+          alt="click here to see more"
+        />
+        <img
+          class="two"
+          src="/svg/arrow-up.svg"
+          alt="arrow up for closing dropdown"
+        />
       </button>
     </div>
     <div class="dropdown" id="dropdownDiv">
-        <div class="dropdown-text">
-      <div class="location">
-        <h3>Location</h3>
-        <p>Høkerboderne 21-23</p>
-        <p>1712 København V</p>
+      <div class="dropdown-text">
+        <div class="location">
+          <h3>Location</h3>
+          <p>Høkerboderne 21-23</p>
+          <p>1712 København V</p>
+        </div>
+        <div class="hours">
+          <h3>Opening hours</h3>
+          <p>Sun - Thu: 11 - 21</p>
+          <p>Fri - Sat: 11 - 22</p>
+        </div>
       </div>
-      <div class="hours">
-        <h3>Opening hours</h3>
-        <p>Sun - Thu: 11 - 21</p>
-        <p>Fri - Sat: 11 - 22</p>
-      </div>
-    </div>
       <div class="buttons">
-        <Knap size="max" style="border">Get directions</Knap>
-        <Knap size="max" style="filled">Order now</Knap>
+        <Knap
+          link="https://www.google.com/maps/place/Tommi's+Burger+joint/@55.6682667,12.5554882,17z/data=!3m2!4b1!5s0x4652530cc8fc9e37:0x6362931784a8f3fb!4m6!3m5!1s0x46525311b33eedb7:0xb9e3acfe63e58e39!8m2!3d55.6682667!4d12.5580631!16s%2Fg%2F1w110tbk?entry=ttu"
+          target="_blank"
+          size="max"
+          style="border"
+        >
+          Get directions
+        </Knap>
+        <Knap
+          link="https://burgerjoint.mealo.dk/"
+          target="_blank"
+          size="max"
+          style="filled"
+        >
+          Order now
+        </Knap>
       </div>
     </div>
   </section>
 </card>
 
 <card class="joint-2">
-     <img class="img-left"
+  <img
+    class="img-left"
     src="/img/nørrejoint.png"
     alt="picture of Tommi's burger Joint on Nørrebro"
   />
@@ -60,80 +81,97 @@ import Knap from "../components/knap.astro";
           <h2>Open now</h2>
         </div>
       </div>
-      <button class="dropdown-arrow" id="toggle" >
-        <img class="one" src="/svg/arrow-dropdown.svg" alt="click here to see more" />
-        <img class="two" src="/svg/arrow-up.svg" alt="arrow up for closing dropdown" />
+      <button class="dropdown-arrow" id="toggle">
+        <img
+          class="one"
+          src="/svg/arrow-dropdown.svg"
+          alt="click here to see more"
+        />
+        <img
+          class="two"
+          src="/svg/arrow-up.svg"
+          alt="arrow up for closing dropdown"
+        />
       </button>
     </div>
     <div class="dropdown" id="dropdown">
-        <div class="dropdown-text">
-      <div class="location-left">
-        <h3>Location</h3>
-        <p>Nørrebrogade 153 </p>
-        <p>2200 København N</p>
+      <div class="dropdown-text">
+        <div class="location-left">
+          <h3>Location</h3>
+          <p>Nørrebrogade 153</p>
+          <p>2200 København N</p>
+        </div>
+        <div class="hours-left">
+          <h3>Opening hours</h3>
+          <p>Sun - Thu: 11 - 21</p>
+          <p>Fri - Sat: 11 - 22</p>
+        </div>
       </div>
-      <div class="hours-left">
-        <h3>Opening hours</h3>
-        <p>Sun - Thu: 11 - 21</p>
-        <p>Fri - Sat: 11 - 22</p>
-      </div>
-    </div>
       <div class="buttons">
-        <Knap size="max" style="border">Get directions</Knap>
-        <Knap size="max" style="filled">Order now</Knap>
+        <Knap
+          link="https://www.google.com/maps/place/Tommi%E2%80%99s+Burger+Joint+N%C3%B8rrebro/@55.694375,12.5456101,17z/data=!3m1!4b1!4m6!3m5!1s0x4652530771171d3b:0x3a7dccaa71e47ed4!8m2!3d55.694375!4d12.548185!16s%2Fg%2F11fvl7dkbz?entry=ttu"
+          target="_blank"
+          size="max"
+          style="border"
+        >
+          Get directions
+        </Knap>
+        <Knap
+          link="https://burgerjoint.mealo.dk/"
+          target="_blank"
+          size="max"
+          style="filled"
+        >
+          Order now
+        </Knap>
       </div>
     </div>
   </section>
 </card>
 
-
-  <script>
+<script>
   var toggleButtonOne = document.getElementById("toggleButton");
-var dropdownDivOne = document.getElementById("dropdownDiv");
- var toggleButtonTwo = document.getElementById("toggle");
-var dropdownDivTwo = document.getElementById("dropdown");
+  var dropdownDivOne = document.getElementById("dropdownDiv");
+  var toggleButtonTwo = document.getElementById("toggle");
+  var dropdownDivTwo = document.getElementById("dropdown");
 
-toggleButtonOne.addEventListener("click", function() {
-  if (dropdownDivOne.style.display === "none") {
-    dropdownDivOne.style.display = "block";  
-    dropdownDivOne.classList.add("active");
-  toggleButtonOne.classList.toggle("active");
-  } else {
-    dropdownDivOne.style.display = "none";
-     toggleButtonOne.classList.remove("active");
-  }
+  toggleButtonOne.addEventListener("click", function () {
+    if (dropdownDivOne.style.display === "none") {
+      dropdownDivOne.style.display = "block";
+      dropdownDivOne.classList.add("active");
+      toggleButtonOne.classList.toggle("active");
+    } else {
+      dropdownDivOne.style.display = "none";
+      toggleButtonOne.classList.remove("active");
+    }
+  });
 
-});
+  toggleButtonTwo.addEventListener("click", function () {
+    if (dropdownDivTwo.style.display === "none") {
+      dropdownDivTwo.style.display = "block";
+      dropdownDivTwo.classList.add("active");
+      toggleButtonTwo.classList.toggle("active");
+    } else {
+      dropdownDivTwo.style.display = "none";
+      toggleButtonTwo.classList.remove("active");
+    }
+  });
 
-toggleButtonTwo.addEventListener("click", function() {
-  if (dropdownDivTwo.style.display === "none") {
-    dropdownDivTwo.style.display = "block";
-    dropdownDivTwo.classList.add("active"); 
-    toggleButtonTwo.classList.toggle("active");
-  } else {
-    dropdownDivTwo.style.display = "none";
-    toggleButtonTwo.classList.remove("active");
-  }
-    
-   
-});
-
-window.addEventListener("resize", function() {
-  if (window.innerWidth > 900) {
-    dropdownDivOne.style.display = "block";
-     dropdownDivTwo.style.display = "block";
-    dropdownDivOne.classList.remove("active")
-    dropdownDivTwo.classList.remove("active")
-  }
-});
-window.addEventListener("resize", function() {
-  if (window.innerWidth <= 900) {
-    dropdownDivOne.style.display = "none";
-    dropdownDivTwo.style.display = "none";
-  }
-});
-
-  </script>
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 900) {
+      dropdownDivOne.style.display = "block";
+      dropdownDivTwo.style.display = "block";
+      dropdownDivOne.classList.remove("active");
+      dropdownDivTwo.classList.remove("active");
+    }
+  });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth <= 900) {
+      dropdownDivOne.style.display = "none";
+      dropdownDivTwo.style.display = "none";
+    }
+  });
+</script>
 
 <style>
   @media (max-width: 900px) {
@@ -157,16 +195,16 @@ window.addEventListener("resize", function() {
       margin-bottom: 7em;
     }
     .img-left {
-        grid-row: 1;
+      grid-row: 1;
     }
     .overskrift {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-inline: 10px;
-       margin-top: 10px;
+      margin-top: 10px;
     }
-     .overskrift-left {
+    .overskrift-left {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -174,7 +212,7 @@ window.addEventListener("resize", function() {
       margin-top: 10px;
     }
     .dropdown-arrow {
-        display: grid;
+      display: grid;
     }
     .dropdown-arrow img {
       margin-right: 10px;
@@ -183,10 +221,10 @@ window.addEventListener("resize", function() {
     .dropdown-arrow .one {
       grid-area: 1/1;
     }
-    
+
     .dropdown-arrow .two {
       grid-area: 1/1;
-        opacity: 0;
+      opacity: 0;
     }
     .open-closed {
       display: flex;
@@ -199,29 +237,29 @@ window.addEventListener("resize", function() {
       display: none;
     }
     .location {
-     margin-top: 2em;   
-     margin-left: 20px;
+      margin-top: 2em;
+      margin-left: 20px;
     }
     .hours {
-     margin-top: 2em;   
-     margin-left: 20px;
+      margin-top: 2em;
+      margin-left: 20px;
     }
     .location-left {
-     margin-top: 2em;   
-     margin-left: 20px;
+      margin-top: 2em;
+      margin-left: 20px;
     }
     .hours-left {
-     margin-top: 2em;   
-     margin-left: 20px;
+      margin-top: 2em;
+      margin-left: 20px;
     }
     .buttons {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        text-align: center;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      text-align: center;
     }
     button {
-        border: none;
-        background-color: transparent;
+      border: none;
+      background-color: transparent;
     }
   }
   @media (min-width: 900px) {
@@ -243,25 +281,24 @@ window.addEventListener("resize", function() {
       margin-top: 2em;
     }
     .img-left {
-        grid-column: 2/3;
+      grid-column: 2/3;
     }
     .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 10px;
-        margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
-      .text-left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        grid-column: 1/2;
-        grid-row: 1;
-        text-align: right;
-
+    .text-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      grid-column: 1/2;
+      grid-row: 1;
+      text-align: right;
     }
 
     .overskrift {
@@ -278,18 +315,18 @@ window.addEventListener("resize", function() {
       margin-left: 20px;
     }
     .dropdown {
-        display: block;
+      display: block;
     }
-    
+
     .dropdown-arrow img {
       margin-right: 10px;
       margin-top: 10px;
       display: grid;
     }
     .dropdown-arrow .one {
-       display: none;
+      display: none;
     }
-    
+
     .dropdown-arrow .two {
       display: none;
     }
@@ -297,12 +334,11 @@ window.addEventListener("resize", function() {
       margin-right: 10px;
       margin-top: 10px;
       display: grid;
-    
     }
     .dropdown-arrow .one {
-       display: none;
+      display: none;
     }
-    
+
     .dropdown-arrow .two {
       display: none;
     }
@@ -313,45 +349,45 @@ window.addEventListener("resize", function() {
       margin-left: 10px;
     }
     .dropdown-text {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
     .location {
-     margin-top: 2em;   
-     margin-left: 10px;
+      margin-top: 2em;
+      margin-left: 10px;
     }
     .hours {
-     margin-top: 2em;   
-     margin-left: 10px;
+      margin-top: 2em;
+      margin-left: 10px;
     }
     .location-left {
-     margin-top: 2em;   
-     margin-left: 20px;
- 
+      margin-top: 2em;
+      margin-left: 20px;
     }
-    .hours-left{
-     margin-top: 2em;   
-     margin-left: 20px;
+    .hours-left {
+      margin-top: 2em;
+      margin-left: 20px;
     }
     .buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1em;  
-    text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 1em;
+      text-align: center;
     }
     button {
-        display: none;
+      display: none;
     }
   }
-  .dropdown-arrow.active img:nth-child(1){
+  .dropdown-arrow.active img:nth-child(1) {
     opacity: 0;
   }
-  .dropdown-arrow.active img:nth-child(2){
+  .dropdown-arrow.active img:nth-child(2) {
     opacity: 100;
   }
- 
 
-  h2, h3, p {
+  h2,
+  h3,
+  p {
     text-align: left;
   }
   h3 {

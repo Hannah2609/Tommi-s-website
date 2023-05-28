@@ -1,9 +1,9 @@
 ---
 import "../CSS/style.css"
-const { link, size, style } = Astro.props;
+const { link, size, style, target } = Astro.props;
 ---
 
-<a class="knap" href={link} target="_parent"><button data-size={size} data-style={style}><p><slot></slot></p></button></a>
+<a class="knap" href={link} target={target}><button data-size={size} data-style={style}><p><slot></slot></p></button></a>
 
   <style>
 @media (max-width: 700px) {
