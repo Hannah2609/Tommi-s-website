@@ -3,14 +3,14 @@ import "../CSS/style.css"
 ---
 
 <card>
-    <section class="play-grid">
-        <a class="knap" href="https://open.spotify.com/playlist/2B3aAjgr3iQz30FJyfnaqp?si=f74df1cd455342ef">
-            <section class="play-boks">
-                <div class="play-flex">
-                    <img src="../public/img/spotifylogo.svg" alt="Spotify">
+    <section class="order-grid">
+        <a class="knap" href="https://burgerjoint.mealo.dk/">
+            <section class="order-boks">
+                <div class="order-flex">
+                    <img src="../public/img/order.svg" alt="Ordernow">
                     <div class="tekst">
-                        <p>Tommi's</p>
-                        <p class="play">Playlist</p>
+                        <p>Order</p>
+                        <p class="order">Now</p>
                     </div>
                 </div>
             </section>
@@ -19,17 +19,15 @@ import "../CSS/style.css"
 </card>
 
 <style>
-
 /* Mobile view */
     @media (max-width:800px){
-        .play-grid .knap{
+        .order-grid .knap{
             display: none;
         }
-}
 
 /* Desktop view */
     @media (min-width:800px){
-    .play-grid{
+    .order-grid{
         margin-left: 50px;
         display: flex;
         justify-content: right;
@@ -43,7 +41,7 @@ import "../CSS/style.css"
         font-size: 12px;
         margin-left: 35px;
     }
-   .play-boks{
+   .order-boks{
         display: flex;
         width: 200px;
         background-color: var(--red);
@@ -56,14 +54,14 @@ import "../CSS/style.css"
         transform: translateY(-50%);
         
     }
-    .play-flex{
+    .order-flex{
         display: flex;
         flex-direction: column;
     }
     .tekst{
         text-align: left;
     }
-    .play{
+    .order{
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 10px;
@@ -76,5 +74,5 @@ import "../CSS/style.css"
         margin-left: 45px;
     }
 }
-
+}
 </style>

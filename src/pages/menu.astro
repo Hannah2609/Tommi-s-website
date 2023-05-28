@@ -5,6 +5,7 @@ import Footer from "../components/footer.astro"
 import Burgercard from "../components/burgercard.astro"
 import Friescard from "../components/friescard.astro"
 import Drinkscard from "../components/drinkscard.astro"
+import Ordercard from "../components/ordercard.astro";
 ---
 
 <html lang="en">
@@ -29,7 +30,7 @@ import Drinkscard from "../components/drinkscard.astro"
                         <br class="mobile">beef and are cooked medium</p>
                     
                     <p>*May contain nuts, sesame, egg and rye</p>
-                    
+                    <Ordercard/>
                     <h4>Offer of the century</h4>
                         <section class="grid-container">    
                             <Burgercard/>
@@ -40,11 +41,8 @@ import Drinkscard from "../components/drinkscard.astro"
                             <Burgercard/>
                             <Burgercard/>
                             <Burgercard/>
-                        </section>
-<!-- 
-            <h4 class="both">Add ons
-                <span class="desktop">Kids</span>
-            </h4> -->
+                        </section> 
+           
                 <Friescard/>
             
                 <Drinkscard/>
