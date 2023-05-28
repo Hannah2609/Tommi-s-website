@@ -6,6 +6,7 @@ import Burgercard from "../components/burgercard.astro"
 import Friescard from "../components/friescard.astro"
 import Drinkscard from "../components/drinkscard.astro"
 import Ordercard from "../components/ordercard.astro";
+import Alleburger from "../components/alleburger.astro";
 ---
 
 <html lang="en">
@@ -31,6 +32,7 @@ import Ordercard from "../components/ordercard.astro";
                     <p>*May contain nuts, sesame, egg and rye</p>
                     <Ordercard/>
                     <h4>Offer of the century</h4>
+                    <Alleburger/>
                         <section class="grid-container">    
                             <Burgercard/>
                             <Burgercard/>
@@ -46,11 +48,11 @@ import Ordercard from "../components/ordercard.astro";
             
                 <Drinkscard/>
 
-                <div class="hungry-bottom">
+                <!-- <div class="hungry-bottom">
                     <h4 class="hungry">Hungry yet?</h4>
 
                     <img src="../public/svg/lunchpil.svg" alt="pil">
-                </div>
+                </div> -->
         </main>
         <Footer/>
     </body>

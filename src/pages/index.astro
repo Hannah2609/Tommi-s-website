@@ -19,32 +19,57 @@ import Islandskeflag from "../components/islandskeflag.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css" />
+
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"
+    ></script>
+
     <title>Astro</title>
   </head>
   <body>
     <Hero>Burger Joint</Hero>
     <main>
       <h1 class="white">Our Joint's</h1>
-      <Playlistecard/>
-      <Joints />  
-	  <Lunch />
+      <Playlistecard />
+      <Joints />
+      <Lunch />
       <Aboutsection />
-   	<Instagram/>
-     <Islandskeflag />
+      <Instagram />
+      <Islandskeflag />
+      <lottie-player
+        id="firstLottie"
+        src="https://lottie.host/a67473d8-f072-42d3-b993-b219a4ed5471/AtKpmA7yy6.json"
+        background="transparent"
+        style="width: 180px; height: 180px;"></lottie-player>
+      <!-- <script>
+LottieInteractivity.create({
+    player: '#firstLottie',
+    mode: 'scroll',
+    actions: [
+        {
+            visibility: [0,1],
+            type: 'seek',
+            frames: [0, 300],
+        },
+    ]
+});
+</script> -->
     </main>
     <Footer />
   </body>
-
-  <style>
-    main {
-      background-color: rgb(0, 0, 0);
-      background-image: url("/img/graineffect.png");
-      background-repeat: repeat;
-      text-align: center;
-    }
-    h1 {
-      margin: 2em;
-    }
-    
-  </style>
 </html>
+
+<style>
+  main {
+    background-color: rgb(0, 0, 0);
+    background-image: url("/img/graineffect.png");
+    background-repeat: repeat;
+    text-align: center;
+  }
+  h1 {
+    margin: 2em;
+  }
+</style>

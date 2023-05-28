@@ -1,24 +1,22 @@
 ---
 import "../CSS/style.css";
+const {overskrift, pris, single, beskrivelse } = Astro.props
 ---
 <card>
 
 <section class="menu-column">
     <div>
-        <h3>Cheese offer
-            <span>140,-</span>
+        <h3>{overskrift}
+            <span>{pris}</span>
         </h3>
             <p class="tilbehor">+ Fries & Soda</p>
-            <p>Cheese, lettuce, tomato, onion,<br class="mobile"> mayo, ketchup and mustard</p>    
-            <p class="single">Single burger
-                <span>100,-</span>
+            <p>{beskrivelse}<br class="mobile"></p>    
+            <p class="single">{single}
             </p>
     </div>
     <img src="/img/cheeseoffer.png" alt="cheeseoffer">
 </section>
-
 </card>
-
 
 <style>
 

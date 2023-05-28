@@ -1,0 +1,38 @@
+---
+import "../CSS/style.css";
+import Card from "./card.astro";
+
+const url =
+  "https://hxalexqthuyrpqrzsqjt.supabase.co/rest/v1/menu_products";
+
+const options = {
+  headers: {
+    apikey:
+     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4YWxleHF0aHV5cnBxcnpzcWp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwOTQ1MjMsImV4cCI6MjAwMDY3MDUyM30.KSHGiNrtTRGaB21HG0vJdX4N4-lB8QrNmlyEGqMw3Tw",
+  },
+};
+
+const response = await fetch(url, options);
+const data = await response.json();  
+
+console.log(data);
+---
+
+
+<section class="alle_burger">
+  {
+    data.map((produkt) => (
+      <Card  overskrift={produkt.name} beskrivelse={produkt.description} single={produkt.single}/>
+  ))}
+  
+</section>
+
+<style> 
+@media (min-width:1200px) {
+.alle_burger{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+    }
+}
+</style>
