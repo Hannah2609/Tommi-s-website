@@ -2,10 +2,16 @@
 import "../CSS/style.css"
 ---
 
+<<<<<<< HEAD
 <card>
     <section class="play-grid">
         <a class="knap" href="https://open.spotify.com/playlist/2B3aAjgr3iQz30FJyfnaqp?si=f74df1cd455342ef" target="_blank">
             
+=======
+<card id="my-card">
+    <section class="play-grid hidden">
+        <a class="knap" href="https://open.spotify.com/playlist/2B3aAjgr3iQz30FJyfnaqp?si=f74df1cd455342ef" target="_blank">
+>>>>>>> playlistecard
             <section class="play-boks">
                 <div class="play-flex">
                     <img src="../public/img/spotifylogo.svg" alt="Spotify">
@@ -19,13 +25,15 @@ import "../CSS/style.css"
     </section>
 </card>
 
+
 <style>
 
 /* Mobile view */
     @media (max-width:800px){
-        .play-grid .knap{
+        .play-grid{
             display: none;
         }
+
 }
 
 /* Desktop view */
@@ -35,10 +43,12 @@ import "../CSS/style.css"
         display: flex;
         justify-content: right;
     }
+  
     .knap{
         text-decoration: none;
         color: var(--text-white);
         justify-content: right;
+    
     }
     p{
         font-size: 18px;
@@ -49,14 +59,19 @@ import "../CSS/style.css"
    .play-boks{
         display: flex;
         width: 200px;
+<<<<<<< HEAD
         background-color: rgba(200, 55, 55, 0.85);
         border-radius: 100px;
+=======
+        background-color: rgba(200, 55, 55, 0.8);
+        border-radius: 100px;
+       
+>>>>>>> playlistecard
         z-index: 100;
         position: fixed;
         top: 50%;
         right: -85px;
         transform: translateY(-50%);
-        
     }
     .play-flex{
         display: flex;
