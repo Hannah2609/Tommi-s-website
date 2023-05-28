@@ -1,0 +1,74 @@
+---
+import "../CSS/style.css"
+---
+
+<card>
+    <section class="play-grid">
+        <a class="knap" href="https://open.spotify.com/playlist/2B3aAjgr3iQz30FJyfnaqp?si=f74df1cd455342ef">
+            <section class="play-boks">
+                <div class="play-flex">
+                    <img src="../public/img/spotifylogo.svg" alt="Spotify">
+                <div class="tekst">
+                    <p>Tommi's</p>
+                    <p class="play">Playlist</p>
+                </div>
+                </div>
+            </section>
+        </a>
+    </section>
+</card>
+
+<style>
+
+/* Mobile view */
+    @media (max-width:800px){
+        .play-grid .knap{
+            display: none;
+        }
+}
+
+/* Desktop view */
+    @media (min-width:800px){
+    .play-boks{
+        margin-left: 50px;
+        display: flex;
+        justify-items: flex-start;
+        
+    }
+    .knap{
+        text-decoration: none;
+        color: var(--text-white);
+    }
+    p{
+        font-size: 13px;
+    }
+    .play-grid{
+        display: flex;
+        align-items: left;
+        width: 400px;
+        background-color: var(--red);
+        border-radius: 100px;
+        opacity: 60%;
+        z-index: 100;
+    }
+    .play-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .tekst{
+        text-align: left;
+    }
+    .play{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+    img{
+        max-width: 100%;
+        width: 50px;
+        margin-top: 10px;
+    }
+}
+
+</style>

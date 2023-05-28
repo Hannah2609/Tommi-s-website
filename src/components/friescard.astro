@@ -6,71 +6,72 @@ import "../CSS/style.css"
     
 <section class="add-grid"> 
     <section class="addons"> 
-    <h1 class="white">Add ons</h1>
-    <div class="flexadd">
-        <section class="fries-column">
-            <div>
-                <h3>Fries
-                    <span class="size">Small/Large</span>
-                </h3>
-                
-                    <p>Classic Fries  35/55,-
-                        <br>Sweet Patato 50/70,-</p>
-                    <p id="red">Sweet Fries Upgrade 15,-</p>
-            </div>
-        </section>
+        <h1>Add ons</h1>
+        <div class="flexadd">
+                <section class="fries-column">
+                    <div>
+                        <h3>Fries
+                            <span class="size">Small/Large</span>
+                        </h3>
+                        
+                            <p>Classic Fries  35/55,-
+                                <br>Sweet Patato 50/70,-</p>
+                            <p id="red">Sweet Fries Upgrade 15,-</p>
+                    </div>
+                </section>
+            
 
-        <section class="dips-column">
-            <div>
-                <h3>Dips 15,-</h3>
-                    <p>Tommi's Cocktail
-                        <span class="right-1">
-                            <br class="skift">Bearnaise</span>
-                            <br>Mayo/Vegan Mayo
+                <section class="dips-column">
+                    <div>
+                        <h3>Dips 15,-</h3>
+                            <p>Tommi's Cocktail
+                                <span class="right-1">
+                                    <br class="skift">Bearnaise</span>
+                                    <br>Mayo/Vegan Mayo
 
-                        <span class="right-2">
-                            <br class="skift">Spicy BBQ</span>
-                            <br>
-                            <span class="last">Chili Mayo</span>
-                        </p>
-            </div>
-        </section>
+                                <span class="right-2">
+                                    <br class="skift">Spicy BBQ</span>
+                                    <br>
+                                    <span class="last">Chili Mayo</span>
+                                </p>
+                    </div>
+                </section>
 
-        <section class="addons-column">
-            <div>
-                <h3>Add-ons</h3>
-                    <p>Cheese 10,-
+                <section class="addons-column">
+                    <div>
+                        <h3>Add-ons</h3>
+                            <p>Cheese 10,-
 
-                        <span class="right-3">
-                            <br class="skift">Spicy BBQ Sauce 15,-</span>
-                            <br>Bacon 15,-
-                            
-                        <span class="right-4">
-                            <br class="skift">Coleslaw 10,-</span>
-                            <br>
-                            <span class="last">Extra patty 40,-</span>
-                        </p>
-                </div>
-            </section></div>
+                                <span class="right-3">
+                                    <br class="skift">Spicy BBQ Sauce 15,-</span>
+                                    <br>Bacon 15,-
+                                    
+                                <span class="right-4">
+                                    <br class="skift">Coleslaw 10,-</span>
+                                    <br>
+                                    <span class="last">Extra patty 40,-</span>
+                                </p>
+                    </div>
+                </section>
+        </div>
 </section> 
     
-        <section class="kidssection"> 
-      <div class="kids">
-        <h1 class="white">Kids</h1>
-            <section class="kids-column">
-                
-                <div>
-                    <h3>Kids offer 100,-</h3>
-                    <p class="tilbehor">+ Fries & Soda</p>
-                    <p>Cheese, lettuce, tomato, onion,<br>
-                        mayo, ketchup and mustard</p>
-                    <p>Single burger 70,-</p>
-                </div>
-            </section>
-        </section>
-        </div>
+    <section class="kidssection"> 
+        <div class="kids">
+                <h1 class="white">Kids</h1>
+                <section class="kids-column">
+                    <div>
+                        <h3>Kids offer 100,-</h3>
+                        <p class="tilbehor">+ Fries & Soda</p>
+                        <p>Cheese, lettuce, tomato, onion,<br>
+                            mayo, ketchup and mustard</p>
+                        <p>Single burger 70,-</p>
+                    </div>
+                </section>
+            </div>
+    </section>
     
-</section>
+
   
 
 </card>
@@ -92,6 +93,14 @@ import "../CSS/style.css"
         max-width: 300px;
     }
 
+    h1{
+        margin-top: 30px;
+        margin-left: 35px;
+        margin-bottom: -10px;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--text-white);
+    }
     h3{
         margin-top: 13px;
         margin-left: 13px;
@@ -116,6 +125,9 @@ import "../CSS/style.css"
         font-size: 9px;
         margin-bottom: 10px;
         margin-top: 5px
+    }
+    .white{
+        margin-left: 35px;
     }
 
 /* Dips */
@@ -226,7 +238,7 @@ import "../CSS/style.css"
     }
     h1{
         color: var(--text-white);
-        margin-top: 25px;
+        margin-top: 40px;
         margin-left: 25px;
         margin-bottom: 5px;
     }
@@ -281,11 +293,12 @@ import "../CSS/style.css"
     .kids-column{
         display: flex;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 25px;
         background-color: var( --red);
         border-radius: 2px;
         width: 350px;
-        padding-bottom: 10px;
+        padding-bottom: 35px;
+        margin-right: 55px;
     }
     .kids-column p:last-child{
         color: var(--bg-color);
@@ -317,6 +330,9 @@ import "../CSS/style.css"
         font-size: 13px;
         margin-top: 55px;
         margin-bottom: 20px;
+    }
+    .white{
+        margin-left: 0px;
     }
 }
 </style>
