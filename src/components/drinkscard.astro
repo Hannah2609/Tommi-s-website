@@ -4,56 +4,69 @@ import "../CSS/style.css"
 
 <card>
 <section class="drinks-grid">
-    <section class="sweet-column">
-        <div>
-            <h3>Milkshakes 60,-</h3>
-                <p>Vanilla</p>
-                <p>Strawberry </p>
-                <p>Chocolate</p>
-                <p>Caramel</p>
-        </div>
-        <div>
-            <br>
-            <h3>Dessert 50,-</h3>
-            <p>Tommi's Ice Sandwich</p>
-        </div>
-    </section>
-
-    <section class="cold-column">
-        <div>
-            <h3>Cold Drinks & Beers</h3>
-            
-                <h4>Cold drinks 25,-</h4>
-                    <p>Coca Cola, Cola Zero, Egis Appelsin,
-                        <br>
-                        Carlsberg Sport, Ginger Ale, Orange Juice, Apple Juice,
-                        <br> 
-                        Still Water, Sparkling Water
-                    </p>
+    <section class="drink">
+        <h1>Drinks</h1>
+        <div class="flexadd">
+            <section class="sweet-column">
+                <div>
+                    <h3>Milkshakes 60,-</h3>
+                        <p>Vanilla</p>
+                        <p>Strawberry </p>
+                        <p>Chocolate</p>
+                        <p>Caramel</p>
+                </div>
+                <div>
                     <br>
+                    <h3>Dessert 50,-</h3>
+                    <p>Tommi's Ice Sandwich</p>
+                </div>
+            </section>
+
+            <section class="cold-column">
                 
-                <h4>Beers</h4>
+                <div>
+                    <h3>Cold Drinks & Beers</h3>
+                    
+                        <h4>Cold drinks 25,-</h4>
+                            <p>Coca Cola, Cola Zero, Egis Appelsin,
+                                <br>
+                                Carlsberg Sport, Ginger Ale, Orange Juice, Apple Juice,
+                                <br> 
+                                Still Water, Sparkling Water
+                            </p>
+                            <br>
+                        
+                        <h4>Beers</h4>
 
-                <p><strong>Schnitzlbaumer Lagerbier Hell 50,-</strong></p>
-                    <p class="procent">4,9% 0,5 L</p>
-               
+                        <p><strong>Schnitzlbaumer Lagerbier Hell 50,-</strong></p>
+                            <p class="procent">4,9% 0,5 L</p>
+                    
 
-                <p><strong>Bryghus - Ùlfur Ùlfur 65,-</strong><p/>
-                    <p class="procent">9% 0,33 L</p>
+                        <p><strong>Bryghus - Ùlfur Ùlfur 65,-</strong><p/>
+                            <p class="procent">9% 0,33 L</p>
+                </div>
+            </section>
+
+        </section>
+
+
+            <section class="lunchsection">
+                <div class="lunch">
+                    <h1 class="white">Lunch offer</h1>
+                    <section class="lunch-column">
+                        <div>
+                            <h3>Hungry for Lunch?</h3>
+                            <p class="menu">Cheese Burger + Fries + Soda</p>
+                            <p class="offer">Don’t miss out on our lunch offer on Weekdays from
+                                <br>11:00-17:00 for only 89,-</p>
+                            
+                                <p class="only">Only at Nørrebro</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
         </div>
     </section>
-
-    <section class="lunch-column">
-        <div>
-            <h3>Hungry for Lunch?</h3>
-            <p class="menu">Cheese Burger + Fries + Soda</p>
-            <p class="offer">Don’t miss out on our lunch offer on Weekdays from
-                <br>11:00-17:00 for only 89,-</p>
-            
-                <p class="only">Only at Nørrebro</p>
-        </div>
-    </section>
-</section>
 </card>
 
 <style>
@@ -87,6 +100,14 @@ import "../CSS/style.css"
         margin-left: 13px;
         font-size: 11px;
         line-height: 2;
+    }
+    h1{
+        margin-top: 30px;
+        margin-left: 35px;
+        margin-bottom: -10px;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--text-white);
     }
 
 /* Cold drinks */
@@ -137,7 +158,7 @@ import "../CSS/style.css"
     }
     .menu{
         color: var(--text-white);
-        margin-top: -2px;
+        margin-top: -3px;
         margin-left: 20px;
         font-size: 8px;
         font-weight: 400;
@@ -171,8 +192,12 @@ import "../CSS/style.css"
 
     .drinks-grid{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0px;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+    }
+    .flexadd {
+        display: flex;
+        gap: 2em;
     }
 /* Sweet-column */
     .sweet-column{
@@ -198,6 +223,12 @@ import "../CSS/style.css"
         font-size: 14px;
         line-height: 1.5;
     }
+    h1{
+        color: var(--text-white);
+        margin-top: 40px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+    }
 
 /* Cold column */
     .cold-column{
@@ -221,13 +252,13 @@ import "../CSS/style.css"
 
 /* Lunch column */
     .lunch-column{
-        margin-left: 35px;
         margin-right: 35px;
-        margin-top: 20px;
+        margin-top: 23px;
         background-color: var( --red);
         border-radius: 2px;
         width: 400px;
-        padding-bottom: 20px;
+        padding-bottom: 65px;
+        padding-top: 24px
     }
     .lunch-column h3{
         color: var(--text-white);
@@ -260,6 +291,10 @@ import "../CSS/style.css"
     .procent::before{
         content: "·";
         margin-right: 5px;
+    }
+    .white{
+        margin-left: 0px;
+        margin-top: 40px;
     }
     
     
