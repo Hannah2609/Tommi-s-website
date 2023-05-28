@@ -18,11 +18,19 @@ import Header from "../components/header.astro";
   <body>
     <section class="hero">
       <Header />
+      <h1 class="white" id="h1">Our story</h1>
+      <img
+        class="fade-out-down"
+        id="arrow"
+        src="../svg/arrow-down.svg"
+        alt="Arrow scroll down"
+      />
     </section>
     <main>
       <section class="container">
         <img
           class="img1"
+          id="img1"
           src="/img/island1.webp"
           alt="photo of tommis iceland"
         />
@@ -51,10 +59,22 @@ import Header from "../components/header.astro";
           </p>
         </div>
       </section>
+      <section class="tommicontainer">
+        <div class="tekstboksT">
+          <h1 class="white">Tommi</h1>
+          <p class="white">
+            This is Tommi. It's short for Tómas. He is a burger enthusiast by
+            trade and has a general passion for this thing called life. This
+            passion always finds its way into his work. This uncrowned king of
+            burgers who has dedicated his life to burgers.
+          </p>
+        </div>
+      </section>
 
       <section class="container2">
         <img
           class="img1"
+          id="img2"
           src="/img/thevibepin.webp"
           alt="photo of people outside of Tommi's"
         />
@@ -62,9 +82,9 @@ import Header from "../components/header.astro";
           <h1>The vibe</h1>
           <p>
             There's no need to dress up, but it's totally fine if you do. We
-            don't discriminate and we'll always welcome you with a smile. <br><br> We're
-            proudly rough around the edges and strongly believe that good music
-            and relaxed atmophere makes a great burger taste even better.
+            don't discriminate and we'll always welcome you with a smile. <br
+            /><br /> We're proudly rough around the edges and strongly believe that
+            good music and relaxed atmophere makes a great burger taste even better.
           </p>
         </div>
       </section>
@@ -72,6 +92,7 @@ import Header from "../components/header.astro";
       <section class="container3">
         <img
           class="img1"
+          id="img3"
           src="/img/theburger.webp"
           alt="photo of tommis burger"
         />
@@ -80,11 +101,10 @@ import Header from "../components/header.astro";
           <p>
             Each part of the burger coming together is what makes it such a
             slam-dunk. Perfectly grilled meat. The soft warm bun. The fresh
-            veggies. <br><br> The sauce and the simply glorious combination of great food
-            and fast service. We only use top-quality meat from grass-fed
+            veggies. <br /><br /> The sauce and the simply glorious combination of
+            great food and fast service. We only use top-quality meat from grass-fed
             cattle, bake our buns daily, and put those good greens in from fresh
-            supply. The result is a simple, yet gloriously satisfying, classic
-            burger.
+            supply. The result is a simple, yet gloriously satisfying, classic burger.
           </p>
         </div>
       </section>
@@ -101,6 +121,10 @@ import Header from "../components/header.astro";
   .hero {
     width: 100vw;
     height: 100vh;
+    background-image: url("/img/storybg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
   }
   .tekstboks1,
   .tekstboks2,
@@ -112,10 +136,19 @@ import Header from "../components/header.astro";
   h1 {
     margin-bottom: 0.5em;
   }
+  #h1 {
+    text-align: center;
+    margin-top: 40vh;
+    font-size: 70px;
+  }
   .knap {
     text-align: center;
     margin-top: 0.5em;
   }
+  #arrow {
+    margin-top: 15vh;
+  }
+ 
 
   @media (max-width: 800px) {
     .tekstboks1,
@@ -139,8 +172,29 @@ import Header from "../components/header.astro";
     .burger {
       display: none;
     }
-    .container {
+     .container2, .container3, .container {
       margin-bottom: 5em;
+    }
+    .container {
+        margin-top: 5em;
+    }
+   
+    .tommicontainer {
+      width: 100%;
+      height: 350px;  
+      background-image: url("/img/tommistor.webp");
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 15em;
+      position: relative;
+    }
+    .tekstboksT {
+       position: absolute;
+       bottom: -210px;
+       text-align: left;
+       padding: 20px;
+       max-width: 400px;
     }
   }
 
@@ -153,7 +207,7 @@ import Header from "../components/header.astro";
       margin-top: 5em;
       margin-bottom: 4em;
     }
-     .container2 {
+    .container2 {
       height: 600px;
       width: 800px;
       position: relative;
@@ -161,8 +215,8 @@ import Header from "../components/header.astro";
       margin-top: 5em;
       margin-bottom: 4em;
     }
-     .container3 {
-      height: 600px;
+    .container3 {
+      height: 800px;
       width: 800px;
       position: relative;
       margin: auto;
@@ -173,28 +227,75 @@ import Header from "../components/header.astro";
       max-width: 400px;
       padding: 30px;
       position: absolute;
+      left: 0;
+      top: 200px;
+    }
+    #img1 {
+      max-width: 300px;
+      position: absolute;
+      top: 200px;
+      right: 0;
+    }
+    #img2 {
+      max-width: 350px;
+      position: absolute;
+      top: 200px;
+      left: 0;
+    }
+    .tekstboks2 {
+      max-width: 400px;
+      padding: 30px;
+      position: absolute;
       right: 0;
       top: 200px;
     }
-    .img1 {
-      max-width: 400px;
+    #img3 {
+      max-width: 350px;
       position: absolute;
-      top: 0;
-      right: 30%;
+      top: 200px;
+      right: 20px;
+      z-index: 20;
+    }
+    .tekstboks3 {
+      max-width: 450px;
+      padding: 30px;
+      padding-right: 80px;
+      position: absolute;
+      left: 20px;
+      top: 150px;
     }
     .img2 {
-      max-width: 300px;
+      max-width: 350px;
       position: absolute;
       top: 40%;
-      left: 0;
+      right: 90px;
       z-index: 100;
     }
     .burger {
       max-width: 150px;
       position: absolute;
-      top: 15%;
-      left: 10%;
+      top: 60%;
+      right: 20px;
       z-index: 100;
+      transform: rotate(-40deg);
+    }
+    .tommicontainer {
+      width: 100%;
+      height: 550px;  
+      background-image: url("/img/tommistor.webp");
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 2em;
+      position: relative;
+    }
+    .tekstboksT {
+       position: absolute;
+       top: 25%;
+       left: 100px;
+       text-align: left;
+       padding: 20px;
+       max-width: 500px;
     }
   }
 </style>
