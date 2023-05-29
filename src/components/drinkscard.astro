@@ -81,7 +81,7 @@ import "../CSS/style.css"
         background-color: var( --paper);
         border-radius: 2px;
         padding-bottom: 10px;
-        max-width: 300px;
+        max-width: 350px;
     }
     .sweet-column br{
         display: none;
@@ -116,7 +116,7 @@ import "../CSS/style.css"
         background-color: var( --paper);
         border-radius: 2px;
         padding-bottom: 10px;
-        max-width: 300px;
+        max-width: 350px;
     }
 
     .cold-column h3{
@@ -147,7 +147,8 @@ import "../CSS/style.css"
         margin-top: 20px;
         background-color: var( --red);
         border-radius: 2px;
-        max-width: 300px;
+        max-width: 350px;
+        margin-bottom: 5em;
     }
     .lunch-column h3{
         color: var(--text-white);
@@ -185,9 +186,8 @@ import "../CSS/style.css"
 
 
 /* Desktop view */
-    @media (min-width:800px){
-
-    .drinks-grid{
+@media (min-width:1300px){ 
+.drinks-grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 15px;
@@ -195,6 +195,10 @@ import "../CSS/style.css"
         margin-bottom: 20px;
         margin-top: 20px;
     }
+     
+}
+
+    @media (min-width:800px){
     .flexadd {
         display: flex;
         gap: 2em;
@@ -206,7 +210,7 @@ import "../CSS/style.css"
     
 /* Sweet-column */
     .sweet-column{
-        margin-left: 145px;
+        margin-left: 30px;
         /* margin-right: 20px; */
         margin-top: 20px;
         background-color: var( --paper);
@@ -231,7 +235,7 @@ import "../CSS/style.css"
     .drik{
         color: var(--text-white);
         margin-top: 40px;
-        margin-left: 145px;
+        margin-left: 30px;
         margin-bottom: 5px;
     }
 
@@ -239,7 +243,7 @@ import "../CSS/style.css"
     .cold-column{
         display: flex;
         margin-left: 5px;
-        /* margin-right: 35px; */
+        margin-right: 30px;
         margin-top: 20px;
         background-color: var( --paper);
         border-radius: 2px;
@@ -262,12 +266,13 @@ import "../CSS/style.css"
     .lunch-column{
         margin-right: 35px;
         margin-top: 25px;
-        margin-left: 20px;
+        margin-left: 30px;
         background-color: var( --red);
         border-radius: 2px;
         width: 300px;
         padding-bottom: 48px;
-        padding-top: 25px
+        padding-top: 25px;
+        margin-bottom: 5em;
     }
     .lunch-column h3{
         color: var(--text-white);
@@ -285,10 +290,7 @@ import "../CSS/style.css"
         margin-top: 40px;
         font-weight: 600;
     }
-    /* .menu::before {
-        content: "·";
-        margin-right: 5px;
-    } */
+  
     .lunch-column br{
         display: none;
     }
@@ -310,7 +312,7 @@ import "../CSS/style.css"
         margin-right: 5px;
     } */
     .white{
-        margin-left: 20px;
+        margin-left: 30px;
         margin-top: 40px;
     }
     
