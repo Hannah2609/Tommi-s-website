@@ -42,7 +42,8 @@
 		transform: translateY(0);
 }
 }
-
+/* rotate effekt via scroll, her gør vi at den roterer om sig selv 
+samt at gøre overgangen smooth */
  .rotate {
  transform-origin: center center;
  transition: transform 0.2s;

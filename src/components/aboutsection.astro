@@ -3,36 +3,41 @@ import "../CSS/style.css";
 import "../CSS/animation.css";
 import Knap from "../components/knap.astro";
 ---
-<section class="container">
-<img class="img2" src="/img/bla_burgerpin.webp" alt="">
-<img class="img1" src="/img/burgerpin.webp" alt="pin" />
-<img id="burger" class="rotate" src="/svg/burger.svg" alt="Burger sticker">
-<div class="tekstboks">
-  <h1>Tommi's Burger</h1>
-  <p>
-    Since 1981 we have made a lot of burgers! <br> We believe that our no nonsense
-    combination of fantastic beef, fresh vegetables, the right mix of
-    condiments, sandwiched in our freshly baked bun is what makes the perfect
-    burger.
-  </p>
-  <div class="knap">
-  <Knap link="/story/" size="max" style="filled">Read our story</Knap></div>
-</div>
 
+<section class="container">
+  <img class="img2" src="/img/bla_burgerpin.webp" alt="" />
+  <img class="img1" src="/img/burgerpin.webp" alt="pin" />
+  <img id="burger" class="rotate" src="/svg/burger.svg" alt="Burger sticker" />
+  <div class="tekstboks">
+    <h1>Tommi's Burger</h1>
+    <p>
+      Since 1981 we have made a lot of burgers! <br /> We believe that our no nonsense
+      combination of fantastic beef, fresh vegetables, the right mix of condiments,
+      sandwiched in our freshly baked bun is what makes the perfect burger.
+    </p>
+    <div class="knap">
+      <Knap link="/story/" size="max" style="filled">Read our story</Knap>
+    </div>
+  </div>
 </section>
 
 <script>
+  // funktion der lytter efter scroll begivenheder
   window.addEventListener("scroll", function () {
-    var rotation = window.pageYOffset / 5;
+    // henter billede vi ønsker at påvirke
     var image = document.getElementById("burger");
+    // Beregner rotationsvinklen baseret på scroll-position, 
+    // dette tilfælde hver gang den scroller 1px på siden vil den roterer billede med 0.5 grader
+    var rotation = window.scrollY * 0.5;
+    // sætter rotaionen på vores billede
     image.style.transform = "rotate(" + rotation + "deg)";
   });
 </script>
 
-
 <style>
   .tekstboks {
-    background-color: var(--paper);
+     background-image: url("../img/paper.jpg");
+      background-size: cover;
     padding: 20px;
     text-align: left;
   }
@@ -44,63 +49,61 @@ import Knap from "../components/knap.astro";
     margin-top: 0.5em;
   }
 
-  @media(max-width:800px) {
-     .tekstboks {
-        max-width: 300px;
-        margin: auto;
-        margin-top: -10px;
-     }
-     .img1 {
-        max-width: 300px;
-     }
-     .img2 {
-        display: none;
-     }
-       #burger {
-       display: none;
-     }
-     .container {
-        margin-bottom: 5em;
-     }
-  }
-
-   @media(min-width:800px) {
-    .container {
-        height: 700px;
-        width: 800px;
-        position: relative;
-        margin: auto;
-        margin-top: 5em;
-        margin-bottom: 4em;
+  @media (max-width: 800px) {
+    .tekstboks {
+      max-width: 300px;
+      margin: auto;
+      margin-top: -10px;
     }
-      .tekstboks {
-        max-width: 400px;
-        padding: 30px;
-        position: absolute;
-        right: 0;
-        top: 200px;
-
-      }
-      .img1 {
-        max-width: 400px;
-        position: absolute;
-        top: 0;
-        right: 30%;
-      }
-        .img2 {
-       max-width: 300px;
-       position: absolute;
-       top: 40%;
-       left: 0;
-       z-index: 100;
-     }
-       #burger {
-       max-width: 150px;
-       position: absolute;
-       top: 15%;
-       left: 10%;
-       z-index: 100;
-     }
+    .img1 {
+      max-width: 300px;
+    }
+    .img2 {
+      display: none;
+    }
+    #burger {
+      display: none;
+    }
+    .container {
+      margin-bottom: 5em;
+    }
   }
 
+  @media (min-width: 800px) {
+    .container {
+      height: 700px;
+      width: 800px;
+      position: relative;
+      margin: auto;
+      margin-top: 5em;
+      margin-bottom: 4em;
+    }
+    .tekstboks {
+      max-width: 400px;
+      padding: 30px;
+      position: absolute;
+      right: 0;
+      top: 200px;
+    }
+    .img1 {
+      max-width: 400px;
+      position: absolute;
+      top: 0;
+      right: 30%;
+    }
+    .img2 {
+      max-width: 300px;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      z-index: 100;
+    }
+    #burger {
+      max-width: 150px;
+      position: absolute;
+      top: 15%;
+      left: 10%;
+      z-index: 100;
+    }
+  }
 </style>

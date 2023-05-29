@@ -1,105 +1,101 @@
 ---
 import "../CSS/style.css";
-const {overskrift, pris, single, beskrivelse } = Astro.props
+const { overskrift, pris, single, beskrivelse } = Astro.props;
 ---
-<card>
 
-<section class="menu-column">
+<card>
+  <section class="menu-column">
     <div>
-        <h3>{overskrift}
-            <span>{pris}</span>
-        </h3>
-            <p class="tilbehor">+ Fries & Soda</p>
-            <p>{beskrivelse}<br class="mobile"></p>    
-            <p class="single">{single}
-            </p>
+      <h3>
+        {overskrift}
+        <span>{pris}</span>
+      </h3>
+      <p class="tilbehor">+ Fries & Soda</p>
+      <p>{beskrivelse}<br class="mobile" /></p>
+      <p class="single">{single}</p>
     </div>
-    <img src="/img/cheeseoffer.png" alt="cheeseoffer">
-</section>
+    <img src="/img/cheeseoffer.png" alt="cheeseoffer" />
+  </section>
 </card>
 
 <style>
-
-/* Mobile view */
-@media (max-width:800px) {
-    h3{
-        margin-top: 13px;
-        margin-left: 13px;
-        font-size: 15px;
-        font-weight: 600;
+  /* Mobile view */
+  @media (max-width: 800px) {
+    h3 {
+      margin-top: 13px;
+      margin-left: 13px;
+      font-size: 15px;
+      font-weight: 600;
     }
-    p{
-        margin-top: 8px;
-        margin-left: 13px;
-        font-size: 8px;
-        line-height: normal;
+    p {
+      margin-top: 8px;
+      margin-left: 13px;
+      font-size: 8px;
+      line-height: normal;
     }
-    .menu-column{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        margin-left: 35px;
-        margin-right: 35px;
-        background-color: var( --paper);
-        height: 100px;
-        border-radius: 2px;
-        max-width: 350px;
+    .menu-column {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-left: 35px;
+      margin-right: 35px;
+      background-color: var(--paper);
+      height: 100px;
+      border-radius: 2px;
+      max-width: 350px;
     }
-    .tilbehor{
-        margin-top: 1px;
-        margin-left: 18px;
-        font-size: 8px;
-        font-weight: 300;
-  }
-    .mobile{
-        display: initial;
+    .tilbehor {
+      margin-top: 1px;
+      margin-left: 18px;
+      font-size: 8px;
+      font-weight: 300;
     }
-    .single{
-        color: var(--red);
-  }
- 
-
-}
-
-/* Desktop view */
-@media (min-width:800px) {
-    h3{
-        margin-top: 22px;
-        margin-left: 18px;
-        font-size: 28px;
-        font-weight: 600;
+    .mobile {
+      display: initial;
     }
-    p{
-        margin-top: 18px;
-        margin-left: 18px;
-        font-size: 15px;
-        line-height: normal;
+    .single {
+      color: var(--red);
     }
-    .menu-column{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        background-color: var( --paper);
-        height: 200px;
-        gap: 10px;
-        max-width: 700px;
-        border-radius: 2px;
-    }
-    .tilbehor{
-        margin-top: 3px;
-        margin-left: 30px;
-        font-size: 13px;
-        font-weight: 300;
-  }
-    .mobile{
-        display: none;
-    }
-    .single{
-        color: var(--red);
-        margin-top: 25px;
-        margin-right: 18px;
   }
 
-}
-
+  /* Desktop view */
+  @media (min-width: 800px) {
+    h3 {
+      margin-top: 22px;
+      margin-left: 18px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 18px;
+      margin-left: 18px;
+      font-size: 15px;
+      line-height: normal;
+    }
+    .menu-column {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      background-image: url("../img/paper.jpg");
+      background-size: cover;
+      height: 200px;
+      gap: 10px;
+      max-width: 700px;
+      border-radius: 2px;
+    }
+    .tilbehor {
+      margin-top: 3px;
+      margin-left: 30px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+    .mobile {
+      display: none;
+    }
+    .single {
+      color: var(--red);
+      margin-top: 25px;
+      margin-right: 18px;
+    }
+  }
 </style>
