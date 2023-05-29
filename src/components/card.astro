@@ -1,52 +1,51 @@
 ---
 import "../CSS/style.css";
-const {overskrift, pris, single, beskrivelse, billede } = Astro.props
+const { overskrift, pris, single, beskrivelse, billede } = Astro.props;
 ---
 
 <card>
-
-<section class="menu-column">
+  <section class="menu-column">
     <div class="tekstboks">
-        <div>
-        <h3>{overskrift}
-            <span>{pris}</span>
+      <div>
+        <h3>
+          {overskrift}
+          <span>{pris}</span>
         </h3>
-            <p class="tilbehor">+ Fries & Soda</p></div>
-            <p>{beskrivelse}<br class="mobile"></p>    
-            <p class="single">{single}
-            </p>
+        <p class="tilbehor">+ Fries & Soda</p>
+      </div>
+      <p>{beskrivelse}<br class="mobile" /></p>
+      <p class="single">{single}</p>
     </div>
-    <img src={"/img/" + billede } alt="Picture of the offer">
-</section>
+    <img src={"/img/" + billede} alt="Picture of the offer" />
+  </section>
 </card>
 
 <style>
-
-/* Mobile view */
-@media (max-width:800px) {
-    h3{
-        margin-top: 10px;
-        margin-left: 13px;
-        font-size: 12px;
-        font-weight: 600;
-        margin-right: 10px;
+  /* Mobile view */
+  @media (max-width: 800px) {
+    h3 {
+      margin-top: 10px;
+      margin-left: 13px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 10px;
     }
-    p{
-        margin-top: 4px;
-        margin-left: 13px;
-        font-size: 8px;
-        line-height: normal;
+    p {
+      margin-top: 4px;
+      margin-left: 13px;
+      font-size: 8px;
+      line-height: normal;
     }
-    .menu-column{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        margin-left: 35px;
-        margin-right: 35px;
-        background-color: var( --paper);
-        height: 105px;
-        border-radius: 2px;
-        max-width: 350px;
+    .menu-column {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-left: 35px;
+      margin-right: 35px;
+      background-color: var(--paper);
+      height: 105px;
+      border-radius: 2px;
+      max-width: 350px;
     }
     .tilbehor {
       margin-top: 1px;
@@ -57,33 +56,31 @@ const {overskrift, pris, single, beskrivelse, billede } = Astro.props
     .mobile {
       display: initial;
     }
-    .single{
-        color: var(--red);
-  }
-  .tekstboks {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
- 
-
-}
-
-/* Desktop view */
-@media (min-width:800px) {
-    h3{
-        margin-top: 22px;
-        margin-left: 18px;
-        font-size: 23px;
-        font-weight: 600;
+    .single {
+      color: var(--red);
     }
-    p{
-        margin-top: 18px;
-        margin-left: 18px;
-        font-size: 13px;
-        line-height: normal;
+    .tekstboks {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  /* Desktop view */
+  @media (min-width: 800px) {
+    h3 {
+      margin-top: 22px;
+      margin-left: 18px;
+      font-size: 23px;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 18px;
+      margin-left: 18px;
+      font-size: 13px;
+      line-height: normal;
     }
     .menu-column {
       display: flex;
@@ -105,13 +102,11 @@ const {overskrift, pris, single, beskrivelse, billede } = Astro.props
     .mobile {
       display: none;
     }
-    .single{
-        color: var(--red);
-        margin-top: 30px;
-        margin-right: 18px;
-        font-size: 15px;
+    .single {
+      color: var(--red);
+      margin-top: 30px;
+      margin-right: 18px;
+      font-size: 15px;
+    }
   }
-
-}
-
 </style>
