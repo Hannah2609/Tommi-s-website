@@ -5,7 +5,7 @@ import "../CSS/style.css"
 <card>
 <section class="drinks-grid">
     <section class="drink">
-        <h1>Drinks</h1>
+        <h1 class="drik">Drinks</h1>
         <div class="flexadd">
             <section class="sweet-column">
                 <div>
@@ -28,10 +28,7 @@ import "../CSS/style.css"
                     <h3>Cold Drinks & Beers</h3>
                     
                         <h4>Cold drinks 25,-</h4>
-                            <p>Coca Cola, Cola Zero, Egis Appelsin,
-                                <br>
-                                Carlsberg Sport, Ginger Ale, Orange Juice, Apple Juice,
-                                <br> 
+                            <p>Coca Cola, Cola Zero, Egis Appelsin, Carlsberg Sport, Ginger Ale,<br>Orange Juice, Apple Juice, 
                                 Still Water, Sparkling Water
                             </p>
                             <br>
@@ -43,14 +40,14 @@ import "../CSS/style.css"
                     
 
                         <p><strong>Bryghus - Ùlfur Ùlfur 65,-</strong><p/>
-                            <p class="procent">9% 0,33 L</p>
+                            <p class="procent1">9% 0,33 L</p>
                 </div>
             </section>
 
         </section>
 
 
-            <section class="lunchsection">
+            <!-- <section class="lunchsection"> -->
                 <div class="lunch">
                     <h1 class="white">Lunch offer</h1>
                     <section class="lunch-column">
@@ -64,7 +61,7 @@ import "../CSS/style.css"
                         </div>
                     </section>
                 </div>
-            </section>
+            <!-- </section> -->
         </div>
     </section>
 </card>
@@ -192,17 +189,25 @@ import "../CSS/style.css"
 
     .drinks-grid{
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 15px;
+        justify-self: end;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
     .flexadd {
         display: flex;
         gap: 2em;
     }
+    h1{
+        font-size: 32px;
+    }
+ 
+    
 /* Sweet-column */
     .sweet-column{
-        margin-left: 30px;
-        margin-right: 35px;
+        margin-left: 145px;
+        /* margin-right: 20px; */
         margin-top: 20px;
         background-color: var( --paper);
         border-radius: 2px;
@@ -223,10 +228,10 @@ import "../CSS/style.css"
         font-size: 14px;
         line-height: 2;
     }
-    h1{
+    .drik{
         color: var(--text-white);
         margin-top: 40px;
-        margin-left: 25px;
+        margin-left: 145px;
         margin-bottom: 5px;
     }
 
@@ -234,11 +239,11 @@ import "../CSS/style.css"
     .cold-column{
         display: flex;
         margin-left: 5px;
-        margin-right: 35px;
+        /* margin-right: 35px; */
         margin-top: 20px;
         background-color: var( --paper);
         border-radius: 2px;
-        width: 450px;
+        width: 476px;
         padding-bottom: 20px;
     }
     h4{
@@ -249,15 +254,19 @@ import "../CSS/style.css"
         font-weight: 700;
         font-style: normal;
     }
+    .cold-column p{
+        font-size: 13px;
+    }
 
 /* Lunch column */
     .lunch-column{
         margin-right: 35px;
         margin-top: 25px;
+        margin-left: 20px;
         background-color: var( --red);
         border-radius: 2px;
-        width: 400px;
-        padding-bottom: 109px;
+        width: 300px;
+        padding-bottom: 48px;
         padding-top: 25px
     }
     .lunch-column h3{
@@ -286,19 +295,22 @@ import "../CSS/style.css"
     .only{
         margin-top: 60px;
         margin-right: 18px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         font-size: 17px;
+    }
+    .procent1{
+        font-size: 13px;
+        margin-bottom: -20px;
     }
     .procent{
         font-size: 13px;
-      
     }
     /* .procent::before{
         content: "·";
         margin-right: 5px;
     } */
     .white{
-        margin-left: 0px;
+        margin-left: 20px;
         margin-top: 40px;
     }
     
