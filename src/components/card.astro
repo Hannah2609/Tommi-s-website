@@ -2,6 +2,7 @@
 import "../CSS/style.css";
 const {overskrift, pris, single, beskrivelse, billede } = Astro.props
 ---
+
 <card>
 
 <section class="menu-column">
@@ -47,14 +48,14 @@ const {overskrift, pris, single, beskrivelse, billede } = Astro.props
         border-radius: 2px;
         max-width: 350px;
     }
-    .tilbehor{
-        margin-top: 1px;
-        margin-left: 18px;
-        font-size: 8px;
-        font-weight: 300;
-  }
-    .mobile{
-        display: initial;
+    .tilbehor {
+      margin-top: 1px;
+      margin-left: 18px;
+      font-size: 8px;
+      font-weight: 300;
+    }
+    .mobile {
+      display: initial;
     }
     .single{
         color: var(--red);
@@ -84,24 +85,25 @@ const {overskrift, pris, single, beskrivelse, billede } = Astro.props
         font-size: 13px;
         line-height: normal;
     }
-    .menu-column{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 8px;
-        background-color: var( --paper);
-        height: 180px;
-        gap: 10px;
-        max-width: 700px;
-        border-radius: 2px;
+    .menu-column {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      background-image: url("../img/paper.jpg");
+      background-size: cover;
+      height: 180px;
+      gap: 10px;
+      max-width: 700px;
+      border-radius: 2px;
     }
-    .tilbehor{
-        margin-top: 3px;
-        margin-left: 30px;
-        font-size: 13px;
-        font-weight: 300;
-  }
-    .mobile{
-        display: none;
+    .tilbehor {
+      margin-top: 3px;
+      margin-left: 30px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+    .mobile {
+      display: none;
     }
     .single{
         color: var(--red);
