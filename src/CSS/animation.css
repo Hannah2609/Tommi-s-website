@@ -1,6 +1,7 @@
  .fade-out-down {
     animation: fade-out-down 2s ease infinite;
   }
+
  
  @keyframes fade-out-down {
     0% {
@@ -12,6 +13,11 @@
       transform: translateY(30px);
     }
   }
+
+  .fade-in-up {
+    animation: fade-in-up 3s ;
+  }
+  
   @keyframes fade-in-up {
     0% {
       opacity: 0;
@@ -36,3 +42,8 @@
 		transform: translateY(0);
 }
 }
+
+ .rotate {
+ transform-origin: center center;
+ transition: transform 0.2s;
+  }

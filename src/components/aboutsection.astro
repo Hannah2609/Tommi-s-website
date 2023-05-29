@@ -6,7 +6,7 @@ import Knap from "../components/knap.astro";
 <section class="container">
 <img class="img2" src="/img/bla_burgerpin.webp" alt="">
 <img class="img1" src="/img/burgerpin.webp" alt="pin" />
-<img class="burger" src="/svg/burger.svg" alt="Burger sticker">
+<img id="burger" class="rotate" src="/svg/burger.svg" alt="Burger sticker">
 <div class="tekstboks">
   <h1>Tommi's Burger</h1>
   <p>
@@ -20,6 +20,14 @@ import Knap from "../components/knap.astro";
 </div>
 
 </section>
+
+<script>
+  window.addEventListener("scroll", function () {
+    var rotation = window.pageYOffset / 5;
+    var image = document.getElementById("burger");
+    image.style.transform = "rotate(" + rotation + "deg)";
+  });
+</script>
 
 
 <style>
@@ -48,7 +56,7 @@ import Knap from "../components/knap.astro";
      .img2 {
         display: none;
      }
-       .burger {
+       #burger {
        display: none;
      }
      .container {
@@ -86,7 +94,7 @@ import Knap from "../components/knap.astro";
        left: 0;
        z-index: 100;
      }
-       .burger {
+       #burger {
        max-width: 150px;
        position: absolute;
        top: 15%;
