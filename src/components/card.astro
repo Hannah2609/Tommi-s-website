@@ -1,6 +1,6 @@
 ---
 import "../CSS/style.css";
-const {overskrift, pris, single, beskrivelse } = Astro.props
+const {overskrift, pris, single, beskrivelse, billede } = Astro.props
 ---
 <card>
 
@@ -14,7 +14,7 @@ const {overskrift, pris, single, beskrivelse } = Astro.props
             <p class="single">{single}
             </p>
     </div>
-    <img src="/img/cheeseoffer.png" alt="cheeseoffer">
+    <img src={"/img/" + billede } alt="Picture of the offer">
 </section>
 </card>
 
