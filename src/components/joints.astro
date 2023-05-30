@@ -5,7 +5,6 @@ import Knap from "../components/knap.astro";
 ---
 
 <card class="joint" id="2">
-  
   <img
     src="/img/kbjoint.png"
     alt="picture of Tommi's burger Joint in kødbyen"
@@ -15,8 +14,9 @@ import Knap from "../components/knap.astro";
       <div>
         <h1>Kødbyen</h1>
         <div class="open-closed">
-          <img src="/svg/grøn-dot.svg" alt="green dot for open" />
-          <h2>Open now</h2>
+          <img id="green1" src="/svg/grøn-dot.svg" alt="green dot for open" />
+          <img id="red1" src="/svg/rød-dot.svg" alt="green dot for open" />
+          <h2 id="status1">Open now</h2>
         </div>
       </div>
       <button class="dropdown-arrow" id="toggleButton">
@@ -78,8 +78,9 @@ import Knap from "../components/knap.astro";
       <div>
         <h1>Nørrebro</h1>
         <div class="open-closed">
-          <img src="/svg/grøn-dot.svg" alt="green dot for open" />
-          <h2>Open now</h2>
+          <img id="green2" src="/svg/grøn-dot.svg" alt="green dot for open" />
+          <img id="red2" src="/svg/rød-dot.svg" alt="green dot for open" />
+          <h2 id="status2">Open now</h2>
         </div>
       </div>
       <button class="dropdown-arrow" id="toggle">
@@ -136,6 +137,8 @@ import Knap from "../components/knap.astro";
   var toggleButtonTwo = document.getElementById("toggle");
   var dropdownDivTwo = document.getElementById("dropdown");
 
+
+
   toggleButtonOne.addEventListener("click", function () {
     if (dropdownDivOne.style.display === "none") {
       dropdownDivOne.style.display = "block";
@@ -172,6 +175,35 @@ import Knap from "../components/knap.astro";
       dropdownDivTwo.style.display = "none";
     }
   });
+
+// Henter den aktuelle tid
+var currentTime = new Date();
+var currentHour = currentTime.getHours();
+
+// Definere åbningstidspunkter for restauranten
+var openingHour = 11;
+var closingHour = 21;
+
+// Checker hvis det er lørdag (sjette dag på ugen)
+if (currentTime.getDay() === 6) {
+  // Definerer lukketiden om lørdagen
+  closingHour = 22;
+}
+
+// Sammenligner den aktuelle tid med åbningstidspunkterne
+if (currentHour >= openingHour && currentHour < closingHour) {
+  // Restauranten er åben og viser open now samt ændrer dot farve
+  document.getElementById("status1").innerHTML = "Open now";
+  document.getElementById("status2").innerHTML = "Open now";
+  document.getElementById("red1").classList.add("hidden");
+  document.getElementById("red2").classList.add("hidden");
+} else {
+  // Restauranten er lukket og viser opens at 9 samt ændrer dot farve
+  document.getElementById("status1").innerHTML = "Opens at 11";
+  document.getElementById("status2").innerHTML = "Opens at 11";
+  document.getElementById("green1").classList.add("hidden");
+   document.getElementById("green2").classList.add("hidden");
+}
 </script>
 
 <style>
@@ -185,10 +217,9 @@ import Knap from "../components/knap.astro";
       max-width: 300px;
       margin: auto;
       margin-top: 4em;
-
     }
     .joint-2 {
-       background-image: url("../img/paper.jpg");
+      background-image: url("../img/paper.jpg");
       background-size: cover;
       display: grid;
       grid-template-rows: auto;
@@ -267,13 +298,13 @@ import Knap from "../components/knap.astro";
     }
   }
   @media (min-width: 900px) {
-    .ourjoints{
+    .ourjoints {
       color: var(--text-white);
       margin-top: 80px;
       margin-bottom: 70px;
     }
     .joint {
-       background-image: url("../img/paper.jpg");
+      background-image: url("../img/paper.jpg");
       background-size: cover;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -282,7 +313,7 @@ import Knap from "../components/knap.astro";
       margin: auto;
     }
     .joint-2 {
-       background-image: url("../img/paper.jpg");
+      background-image: url("../img/paper.jpg");
       background-size: cover;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -408,5 +439,7 @@ import Knap from "../components/knap.astro";
   p {
     line-height: 20px;
   }
- 
+  .hidden {
+    display: none;
+  }
 </style>
