@@ -13,8 +13,12 @@ import Islandskeflag from "../components/islandskeflag.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
     <link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css" />
-    <title>Astro</title>
+    <title>Our Story</title>
   </head>
   <body>
     <section class="hero">
@@ -35,8 +39,13 @@ import Islandskeflag from "../components/islandskeflag.astro";
           src="/img/island1.webp"
           alt="photo of tommis iceland"
         />
-        <img class="img2"  src="/img/tommi.webp" alt="photo of tommi" />
-        <img id="burger" class="rotate" src="/svg/burger.svg" alt="Burger sticker" />
+        <img class="img2" src="/img/tommi.webp" alt="photo of tommi" />
+        <img
+          id="burger"
+          class="rotate"
+          src="/svg/burger.svg"
+          alt="Burger sticker"
+        />
         <div class="tekstboks1">
           <h1>From Iceland to Copenhagen</h1>
           <p>
@@ -116,20 +125,18 @@ import Islandskeflag from "../components/islandskeflag.astro";
   </body>
 </html>
 
-
 <script>
   // funktion der lytter efter scroll begivenheder
   window.addEventListener("scroll", function () {
     // henter billede vi ønsker at påvirke
     var image = document.getElementById("burger");
-    // Beregner rotationsvinklen baseret på scroll-position, 
+    // Beregner rotationsvinklen baseret på scroll-position,
     // dette tilfælde hver gang den scroller 1px på siden vil den roterer billede med 0.5 grader
     var rotation = window.scrollY * 0.5;
     // sætter rotaionen på vores billede
     image.style.transform = "rotate(" + rotation + "deg)";
   });
 </script>
-
 
 <style>
   main {
@@ -168,7 +175,6 @@ import Islandskeflag from "../components/islandskeflag.astro";
     margin-top: 15vh;
   }
 
-
   @media (max-width: 800px) {
     .tekstboks1,
     .tekstboks3 {
@@ -191,16 +197,18 @@ import Islandskeflag from "../components/islandskeflag.astro";
     #burger {
       display: none;
     }
-     .container2, .container3, .container {
+    .container2,
+    .container3,
+    .container {
       margin-bottom: 5em;
     }
     .container {
-        margin-top: 5em;
+      margin-top: 5em;
     }
-   
+
     .tommicontainer {
       width: 100%;
-      height: 350px;  
+      height: 350px;
       background-image: url("/img/tommistor.webp");
       background-position: right;
       background-repeat: no-repeat;
@@ -209,14 +217,12 @@ import Islandskeflag from "../components/islandskeflag.astro";
       position: relative;
     }
 
-   
     .tekstboksT {
-       position: absolute;
-       bottom: -210px;
-       text-align: left;
-       padding: 20px;
-       max-width: 400px;
-     
+      position: absolute;
+      bottom: -210px;
+      text-align: left;
+      padding: 20px;
+      max-width: 400px;
     }
   }
 
@@ -304,14 +310,13 @@ import Islandskeflag from "../components/islandskeflag.astro";
     }
     .tommicontainer {
       width: 100%;
-      height: 550px;  
+      height: 550px;
       background-image: url("/img/tommistor.webp");
       background-position: right;
       background-repeat: no-repeat;
       background-size: cover;
       margin-bottom: 2em;
       position: relative;
-     
     }
 
     .tommicontainer p {
@@ -323,16 +328,14 @@ import Islandskeflag from "../components/islandskeflag.astro";
     .tommicontainer h1 {
       font-size: 45px;
       line-height: 50px;
-     
     }
     .tekstboksT {
-       position: absolute;
-       top: 15%;
-       left: 100px;
-       text-align: left;
-       padding: 30px;
-       max-width: 530px;
-      
+      position: absolute;
+      top: 15%;
+      left: 100px;
+      text-align: left;
+      padding: 30px;
+      max-width: 530px;
     }
   }
 </style>

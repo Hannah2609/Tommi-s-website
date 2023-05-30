@@ -1,159 +1,161 @@
 ---
 import "../CSS/style.css";
-import Header from "../components/header.astro"
-import Footer from "../components/footer.astro"
-import Burgercard from "../components/burgercard.astro"
-import Friescard from "../components/friescard.astro"
-import Drinkscard from "../components/drinkscard.astro"
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import Burgercard from "../components/burgercard.astro";
+import Friescard from "../components/friescard.astro";
+import Drinkscard from "../components/drinkscard.astro";
 import Ordercard from "../components/ordercard.astro";
 import Alleburger from "../components/alleburger.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css">
-		<title>Astro</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+   <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css" />
+    <title>Menu</title>
+  </head>
 
-    <body>
-   <Header/>
-        <main>
-            <h1>Menu</h1>
-                <p>All burgers are served with lettuce, onion,
-                    <br class="mobile"> ketchup and mustard</p>
+  <body>
+    <Header />
+    <main>
+      <h1>Menu</h1>
+      <p>
+        All burgers are served with lettuce, onion,
+        <br class="mobile" /> ketchup and mustard
+      </p>
 
-                    <p>Our burger patties are 150 grams and high quality
-                        <br class="mobile">beef and are cooked medium</p>
-                    
-                    <p>*May contain nuts, sesame, egg and rye</p>
-                    <Ordercard/>
-                    <h4>Offer of the century</h4>
-                    <Alleburger/>
-                        <!-- <section class="grid-container">    
+      <p>
+        Our burger patties are 150 grams and high quality
+        <br class="mobile" />beef and are cooked medium
+      </p>
+
+      <p>*May contain nuts, sesame, egg and rye</p>
+      <Ordercard />
+      <h4>Offer of the century</h4>
+      <Alleburger />
+      <!-- <section class="grid-container">    
                             <Burgercard/>
                          
                         </section>  -->
-           
-                <Friescard/>
-            
-                <Drinkscard/>
 
-                <!-- <div class="hungry-bottom">
+      <Friescard />
+
+      <Drinkscard />
+
+      <!-- <div class="hungry-bottom">
                     <h4 class="hungry">Hungry yet?</h4>
 
                     <img src="../public/svg/lunchpil.svg" alt="pil">
                 </div> -->
-        </main>
-        <Footer/>
-    </body>
+    </main>
+    <Footer />
+  </body>
 </html>
 
 <style>
+  /* Mobile view */
+  @media (max-width: 800px) {
+    h1 {
+      color: var(--text-white);
+      text-align: center;
 
-/* Mobile view */
-@media (max-width:800px) {
-    h1{
-        color: var(--text-white);
-        text-align: center;
+      margin-bottom: 1em;
+    }
+    h4 {
+      color: var(--text-white);
+      text-align: left;
+      margin-left: 35px;
+      margin-top: 40px;
+      margin-bottom: -10px;
 
-        margin-bottom: 1em;
+      font-size: 22px;
+      font-family: "itc-american-typewriter", serif;
+      font-weight: 700;
+      font-style: normal;
     }
-    h4{
-        color: var(--text-white);
-        text-align: left;
-        margin-left: 35px;
-        margin-top: 40px;
-        margin-bottom: -10px;
-
-        font-size: 22px;
-        font-family: "itc-american-typewriter", serif;
-        font-weight: 700;
-        font-style: normal;
+    p {
+      font-size: 12px;
+      line-height: normal;
+      color: var(--text-white);
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 7px;
     }
-    p{
-        font-size: 12px;
-        line-height: normal;
-        color: var(--text-white);
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 7px;
-    }
-    .mobile{
-        display: initial;
+    .mobile {
+      display: initial;
     }
 
-    .hungry-bottom{
-        position: relative;
+    .hungry-bottom {
+      position: relative;
     }
-    img{
-        position: absolute;
+    img {
+      position: absolute;
     }
-    .desktop{
-
-    }
-     main {
-    margin-top: 5em;
-}
-
-}
-
-/* Desktop view */
-@media (min-width:800px) {
-    h1{
-        color: var( --text-white);
-        text-align: center;
-
-        margin-bottom: 10px;
-    }
-    h4{
-        color: var(--text-white);
-        margin-left: 35px;
-        margin-top: 60px;
-        margin-bottom: 10px;
-        
-
-        font-size: 35px;
-        font-family: "itc-american-typewriter", serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-    p{
-        color: var(--text-white);
-        text-align: center;
-        font-family: "itc-american-typewriter", serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 14px;
-        line-height: 23px;
-
-        margin-bottom: 7px;
-    }
-    .mobile{
-        display: none;
-    }
-  
-    .desktop{
-        text-align: right;
-        margin-right: 300px;
-    }
-    .hungry{
-        margin-left: 350px;
+    .desktop {
     }
     main {
-    margin-top: 10em;
-}
-    
-        
-}
-@media (min-width:1200px) {
-.grid-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0px;
+      margin-top: 5em;
     }
-}
+  }
+
+  /* Desktop view */
+  @media (min-width: 800px) {
+    h1 {
+      color: var(--text-white);
+      text-align: center;
+
+      margin-bottom: 10px;
+    }
+    h4 {
+      color: var(--text-white);
+      margin-left: 35px;
+      margin-top: 60px;
+      margin-bottom: 10px;
+
+      font-size: 35px;
+      font-family: "itc-american-typewriter", serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    p {
+      color: var(--text-white);
+      text-align: center;
+      font-family: "itc-american-typewriter", serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 23px;
+
+      margin-bottom: 7px;
+    }
+    .mobile {
+      display: none;
+    }
+
+    .desktop {
+      text-align: right;
+      margin-right: 300px;
+    }
+    .hungry {
+      margin-left: 350px;
+    }
+    main {
+      margin-top: 10em;
+    }
+  }
+  @media (min-width: 1200px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0px;
+    }
+  }
 </style>
