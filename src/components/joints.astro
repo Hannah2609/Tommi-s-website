@@ -137,8 +137,6 @@ import Knap from "../components/knap.astro";
   var toggleButtonTwo = document.getElementById("toggle");
   var dropdownDivTwo = document.getElementById("dropdown");
 
-
-
   toggleButtonOne.addEventListener("click", function () {
     if (dropdownDivOne.style.display === "none") {
       dropdownDivOne.style.display = "block";
@@ -149,7 +147,6 @@ import Knap from "../components/knap.astro";
       toggleButtonOne.classList.remove("active");
     }
   });
-
   toggleButtonTwo.addEventListener("click", function () {
     if (dropdownDivTwo.style.display === "none") {
       dropdownDivTwo.style.display = "block";
@@ -160,7 +157,6 @@ import Knap from "../components/knap.astro";
       toggleButtonTwo.classList.remove("active");
     }
   });
-
   window.addEventListener("resize", function () {
     if (window.innerWidth > 900) {
       dropdownDivOne.style.display = "block";
@@ -175,21 +171,17 @@ import Knap from "../components/knap.astro";
       dropdownDivTwo.style.display = "none";
     }
   });
-
 // Henter den aktuelle tid
 var currentTime = new Date();
 var currentHour = currentTime.getHours();
-
 // Definere åbningstidspunkter for restauranten
 var openingHour = 11;
 var closingHour = 21;
-
 // Checker hvis det er lørdag (sjette dag på ugen)
 if (currentTime.getDay() === 6) {
   // Definerer lukketiden om lørdagen
   closingHour = 22;
 }
-
 // Sammenligner den aktuelle tid med åbningstidspunkterne
 if (currentHour >= openingHour && currentHour < closingHour) {
   // Restauranten er åben og viser open now samt ændrer dot farve

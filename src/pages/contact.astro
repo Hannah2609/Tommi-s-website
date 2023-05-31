@@ -109,18 +109,14 @@ import Footer from "../components/footer.astro";
   document.addEventListener("DOMContentLoaded", function(){
     //Henter formularen via id
     const form = document.getElementById("formular");
-
     //Lyt på det indsendte
     form.addEventListener("submit", function(event){
       event.preventDefault();
-
     //Vis tak besked
     const tak = document.getElementById("tak");
     tak.style.display = "block";
-
     //Nulstil form
     document.querySelector("form").reset();
-   
     });
   });
 </script>

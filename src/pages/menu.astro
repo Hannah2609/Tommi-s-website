@@ -15,10 +15,27 @@ import Knap from "../components/knap.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="content" content="Bacon cheese? or vegan offer? Whatever your preference is, our menu has it. Try Tommi's."/>
-   <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+    <meta
+      name="content"
+      content="Bacon cheese? or vegan offer? Whatever your preference is, our menu has it. Try Tommi's."
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
     <link rel="manifest" href="/favicon_io/site.webmanifest" />
     <link rel="stylesheet" href="https://use.typekit.net/cfq0rxa.css" />
     <title>Tommi's Menu</title>
@@ -32,58 +49,52 @@ import Knap from "../components/knap.astro";
         All burgers are served with lettuce, onion,
         <br class="mobile" /> ketchup and mustard
       </p>
-
       <p>
         Our burger patties are 150 grams and high quality
         <br class="mobile" />beef and are cooked medium
       </p>
-
       <p>*May contain nuts, sesame, egg and rye</p>
       <Ordercard />
       <h4>Offer of the century</h4>
       <Alleburger />
-
       <Friescard />
-
       <Drinkscard />
 
-<section class="bunden">
-    <h1 class="Hungry">Hungry yet?</h1>
-            <img class="pilen" src="/svg/hungryyet.svg" alt="Pil">
-            <div class="knap">
-            <Knap style="filled" size="lille">Order now</Knap>
-            </div>
-</section>
-        </main>
-     <Footer/>
-    </body>
+      <section class="bunden">
+        <h1 class="Hungry">Hungry yet?</h1>
+        <img class="pilen" src="/svg/hungryyet.svg" alt="Pil" />
+        <div class="knap">
+          <Knap style="filled" size="lille">Order now</Knap>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
 
 <style>
-
-/* Mobile view */
-@media (max-width:800px) {
-
-    .bunden{
-    margin-bottom: 6em;
-    margin-right: 10px;
-    text-align: center;
+  /* Mobile view */
+  @media (max-width: 800px) {
+    .bunden {
+      margin-bottom: 6em;
+      margin-right: 10px;
+      text-align: center;
     }
 
-   .bunden h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 22px;
+    .bunden h1 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 22px;
     }
 
-    .pilen{
-    display: none;
+    .pilen {
+      display: none;
     }
 
-    h1{
-        color: var(--text-white);
-        text-align: center;
-        margin-bottom: 1em;
+    h1 {
+      color: var(--text-white);
+      text-align: center;
+      margin-bottom: 1em;
     }
     h4 {
       color: var(--text-white);
@@ -122,28 +133,26 @@ import Knap from "../components/knap.astro";
     }
   }
 
-/* Desktop view */
-@media (min-width:800px) {
-
-    .bunden{
-    margin-bottom: 6em;
-    margin-right: 10px;
-    text-align: center;
+  /* Desktop view */
+  @media (min-width: 800px) {
+    .bunden {
+      margin-bottom: 6em;
+      margin-right: 10px;
+      text-align: center;
     }
 
-   .bunden h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
+    .bunden h1 {
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
-    .pilen{
-    display: none;
+    .pilen {
+      display: none;
     }
-    h1{
-        color: var( --text-white);
-        text-align: center;
-        margin-bottom: 10px;
+    h1 {
+      color: var(--text-white);
+      text-align: center;
+      margin-bottom: 10px;
     }
     h4 {
       color: var(--text-white);
@@ -156,14 +165,14 @@ import Knap from "../components/knap.astro";
       font-weight: 700;
       font-style: normal;
     }
-    p{
-        color: var(--text-white);
-        text-align: center;
-        font-family: "itc-american-typewriter", serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 16px;
-        line-height: 23px;
+    p {
+      color: var(--text-white);
+      text-align: center;
+      font-family: "itc-american-typewriter", serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 23px;
 
       margin-bottom: 7px;
     }
@@ -179,40 +188,37 @@ import Knap from "../components/knap.astro";
       margin-left: 350px;
     }
     main {
-    margin-top: 10em;
-}
-    
-        
-}
-@media (min-width:1300px) {
-.grid-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0px;
+      margin-top: 10em;
     }
-    .bunden{
-        margin-bottom: 10em;
-        margin-top: 5em;
-        text-align: left;
+  }
+  @media (min-width: 1300px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0px;
+    }
+    .bunden {
+      margin-bottom: 10em;
+      margin-top: 5em;
+      text-align: left;
     }
 
-   .bunden h1 {
-        margin-left: -9.5em;
-        margin-top: 10px;
+    .bunden h1 {
+      margin-left: -9.5em;
+      margin-top: 10px;
     }
 
-    .pilen{
-        display: block;
-        max-width: 100%;
-        width: 75px;
-        margin-left: 39em;
-        margin-top: 10px;
-        margin-right: 3em;
+    .pilen {
+      display: block;
+      max-width: 100%;
+      width: 75px;
+      margin-left: 39em;
+      margin-top: 10px;
+      margin-right: 3em;
     }
-    .knap{
-        margin-left: 45em;
-        margin-top: -50px;
+    .knap {
+      margin-left: 45em;
+      margin-top: -50px;
     }
-   
-}
+  }
 </style>
