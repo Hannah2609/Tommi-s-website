@@ -21,15 +21,21 @@ import Footer from "../components/footer.astro";
   <body>
     <Header />
     <main>
+  
       <h1 class="white">Is it me you're looking for?</h1>
       <h2 class="white">We dont have table reservations</h2>
-      <form action="kontakt">
-        <input type="text" id="name" placeholder="Name" />
-        <input type="text" id="email" placeholder="Email" />
+ 
+      <form id="formular">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="text" id="email" placeholder="Email" required />
         <input type="text" id="subject" placeholder="Subject" />
-        <textarea rows="20" placeholder="What's on your mind.."></textarea>
-        <button>Send</button>
+        <textarea rows="20" placeholder="What's on your mind.." required></textarea>
+        <button type="submit">Send</button>
       </form>
+
+      <div id="tak" style="display:none;">
+       <h2>Thank you for your message!</h2> 
+      </div>
     </main>
     <Footer />
   </body>
@@ -78,7 +84,7 @@ import Footer from "../components/footer.astro";
   }
   main {
     text-align: center;
-    margin-top: 8em;
+    margin-top: 5em;
   }
   button {
     border: none;
@@ -91,4 +97,30 @@ import Footer from "../components/footer.astro";
     font-size: 17px;
     margin-top: 0.5em;
   }
+  #tak{
+    font-size: 25px;
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 4em;
+  }
 </style>
+<script>
+  //Indlæses
+  document.addEventListener("DOMContentLoaded", function(){
+    //Henter formularen via id
+    const form = document.getElementById("formular");
+
+    //Lyt på det indsendte
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+
+    //Vis tak besked
+    const tak = document.getElementById("tak");
+    tak.style.display = "block";
+
+    //Nulstil form
+    document.querySelector("form").reset();
+   
+    });
+  });
+</script>
