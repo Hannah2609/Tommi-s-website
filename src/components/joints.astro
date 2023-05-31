@@ -5,8 +5,8 @@ import Knap from "../components/knap.astro";
 ---
 
 <card class="joint">
-  <img
-    src="/img/kbjoint.webp" height="308"
+  <img class="image"
+    src="/img/kbjoint.webp" 
     alt="picture of Tommi's burger Joint in kødbyen"
   />
   <section class="text">
@@ -70,7 +70,7 @@ import Knap from "../components/knap.astro";
 <card class="joint-2">
   <img
     class="img-left"
-    src="/img/nørrejoint.webp" height="308"
+    src="/img/nørrejoint.webp"
     alt="picture of Tommi's burger Joint on Nørrebro"
   />
   <section class="text-left">
@@ -223,6 +223,12 @@ if (currentHour >= openingHour && currentHour < closingHour) {
     }
     .img-left {
       grid-row: 1;
+      max-width: 300px;
+      height: 100%;
+    }
+     .image {
+      max-width: 300px;
+      max-height: 100%;
     }
     .overskrift {
       display: flex;
@@ -288,6 +294,7 @@ if (currentHour >= openingHour && currentHour < closingHour) {
       border: none;
       background-color: transparent;
     }
+
   }
   @media (min-width: 900px) {
     .ourjoints {
@@ -410,6 +417,15 @@ if (currentHour >= openingHour && currentHour < closingHour) {
     }
     button {
       display: none;
+    }
+      .img-left {
+      grid-row: 1;
+      max-width: 450px;
+      height: 100%;
+    }
+     .image {
+      max-width: 450px;
+      max-height: 100%;
     }
   }
   .dropdown-arrow.active img:nth-child(1) {
