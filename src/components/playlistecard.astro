@@ -3,7 +3,7 @@ import "../CSS/style.css"
 ---
 
 <card>
-    <section class="play-grid hidden">
+    <section id="play-grid" class="play-grid hidden">
         <a class="knap" href="https://open.spotify.com/playlist/2B3aAjgr3iQz30FJyfnaqp?si=f74df1cd455342ef" target="_blank">
             <section class="play-boks">
                 <div class="play-flex">
@@ -31,7 +31,7 @@ import "../CSS/style.css"
 
 /* Desktop view */
     @media (min-width:800px){
-    .play-grid{
+    #play-grid{
         margin-left: 50px;
         display: flex;
         justify-content: right;
@@ -80,6 +80,47 @@ import "../CSS/style.css"
         margin-top: 15px;
         margin-left: 45px;
     }
+    .hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+    }
+    .visible {
+        opacity: 1;
+    }
+ 
 }
 
 </style>
+
+<script>
+    // Opret en Intersection Observer
+        var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+            // Elementet er synligt i viewporten
+            entry.target.classList.add('visible');
+            } else {
+            // Elementet er uden for viewporten
+            entry.target.classList.remove('visible');
+            }
+        });
+        });
+
+    // Vælg det ønskede element
+        var playGrid = document.getElementById('play-grid');
+
+    // Tilføj elementet til Intersection Observeren
+        observer.observe(playGrid);
+        var playGrid = document.getElementById('play-grid');
+
+    window.addEventListener('scroll', function() {
+    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollPosition > 500) {
+        playGrid.classList.remove('hidden');
+        playGrid.classList.add('visible');
+    } else {
+        playGrid.classList.remove('visible');
+        playGrid.classList.add('hidden');
+    }
+    });
+</script>
